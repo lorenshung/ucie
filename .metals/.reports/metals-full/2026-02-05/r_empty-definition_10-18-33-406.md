@@ -1,4 +1,15 @@
-package edu.berkeley.cs.ucie.digital.d2dadapter
+error id: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DMainbandModule.scala:`<error>`#`<error>`.
+file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DMainbandModule.scala
+empty definition using pc, found symbol in pc: 
+empty definition using semanticdb
+
+found definition using fallback; symbol Wire
+offset: 4511
+uri: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DMainbandModule.scala
+text:
+```scala
+package edu.berkeley.cs.ucie.digital
+package d2dadapter
 
 import chisel3._
 //import chisel3.util._
@@ -117,7 +128,7 @@ class D2DMainbandModule(val fdiParams: FdiParams, val rdiParams: RdiParams, val 
     }
 
     // phy -> d2d -> protocol
-    val streaming = Wire(new ProtoStream())
+    val streaming = Wire@@(new ProtoStream())
     streaming.protoStack := ProtoStack.stack0
     streaming.protoType := ProtoStreamType.Stream
     io.fdi_pl_stream <> streaming
@@ -145,3 +156,9 @@ class D2DMainbandModule(val fdiParams: FdiParams, val rdiParams: RdiParams, val 
     }
 
 }
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: 

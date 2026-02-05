@@ -1,4 +1,30 @@
-package edu.berkeley.cs.ucie.digital.d2dadapter
+error id: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DSidebandModule.scala:
+file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DSidebandModule.scala
+empty definition using pc, found symbol in pc: 
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+	 -chisel3/SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE.
+	 -chisel3/SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE#
+	 -chisel3/SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE().
+	 -interfaces/SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE.
+	 -interfaces/SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE#
+	 -interfaces/SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE().
+	 -sideband/SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE.
+	 -sideband/SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE#
+	 -sideband/SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE().
+	 -SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE.
+	 -SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE#
+	 -SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE().
+	 -scala/Predef.SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE.
+	 -scala/Predef.SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE#
+	 -scala/Predef.SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE().
+offset: 3314
+uri: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DSidebandModule.scala
+text:
+```scala
+package edu.berkeley.cs.ucie.digital
+package d2dadapter
 
 import chisel3._
 //import chisel3.util._
@@ -68,7 +94,7 @@ class D2DSidebandModule(val fdiParams: FdiParams, val sbParams: SidebandParams) 
     sideband_switch.io.inner.node_to_layer_above.ready := true.B
 
     when(sideband_switch.io.inner.node_to_layer_below.valid && sideband_switch.io.inner.node_to_layer_below.ready){
-        when(sideband_switch.io.inner.node_to_layer_below.bits === SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE){
+        when(sideband_switch.io.inner.node_to_layer_below.bits === SBM.LINK_MGMT_ADAPT@@ER0_REQ_ACTIVE){
             io.sideband_rcv := SideBandMessage.REQ_ACTIVE
         }.elsewhen(sideband_switch.io.inner.node_to_layer_below.bits === SBM.LINK_MGMT_ADAPTER0_REQ_L1){
             io.sideband_rcv := SideBandMessage.REQ_L1
@@ -149,3 +175,10 @@ class D2DSidebandModule(val fdiParams: FdiParams, val sbParams: SidebandParams) 
     }
 }
 
+
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: 
