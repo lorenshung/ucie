@@ -1,6 +1,22 @@
-package edu.berkeley.cs.ucie.digital.d2dadapter
+error id: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala:edu/berkeley/cs/ucie/digital/d2dadapter/`<error: <none>>`.
+file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala
+empty definition using pc, found symbol in pc: 
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+	 -chisel3/chisel3.
+	 -interfaces/chisel3.
+	 -sideband/chisel3.
+	 -chisel3.
+	 -scala/Predef.chisel3.
+offset: 67
+uri: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala
+text:
+```scala
+package edu.berkeley.cs.ucie.digital
+package d2dadapter
 
-import chisel3._
+import chi@@sel3._
 //import chisel3.util._
 //import chisel3.experimental._
 
@@ -163,3 +179,9 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     val parity_check_result = parity_generator.io.parity_check_result
     val parity_check_result_valid = parity_generator.io.parity_check_result_valid
 }
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: 

@@ -1,4 +1,15 @@
-package edu.berkeley.cs.ucie.digital.d2dadapter
+error id: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DSidebandModule.scala:java/lang/Module#
+file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DSidebandModule.scala
+empty definition using pc, found symbol in pc: java/lang/Module#
+empty definition using semanticdb
+
+found definition using fallback; symbol Module
+offset: 1671
+uri: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DSidebandModule.scala
+text:
+```scala
+package edu.berkeley.cs.ucie.digital
+package d2dadapter
 
 import chisel3._
 //import chisel3.util._
@@ -38,7 +49,7 @@ class D2DSidebandModule(val fdiParams: FdiParams, val sbParams: SidebandParams) 
 
     val fdi_sideband_node = Module(new SidebandNode(sbParams, fdiParams))
     val rdi_sideband_node = Module(new SidebandNode(sbParams, fdiParams))
-    val sideband_switch = Module(new sidebandSwitcher(myID = 1, sbParams = sbParams))
+    val sideband_switch = @@Module(new sidebandSwitcher(myID = 1, sbParams = sbParams))
 
     io.fdi_pl_cfg := fdi_sideband_node.io.outer.tx.bits
     io.fdi_pl_cfg_vld := fdi_sideband_node.io.outer.tx.valid
@@ -149,3 +160,10 @@ class D2DSidebandModule(val fdiParams: FdiParams, val sbParams: SidebandParams) 
     }
 }
 
+
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: java/lang/Module#

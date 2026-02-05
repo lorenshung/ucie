@@ -1,4 +1,16 @@
-package edu.berkeley.cs.ucie.digital.d2dadapter
+error id: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala:edu/berkeley/cs/ucie/digital/d2dadapter/D2DAdapterIO#fdiParams.
+file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala
+empty definition using pc, found symbol in pc: 
+found definition using semanticdb; symbol edu/berkeley/cs/ucie/digital/d2dadapter/D2DAdapterIO#fdiParams.
+empty definition using fallback
+non-local guesses:
+
+offset: 203
+uri: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala
+text:
+```scala
+package edu.berkeley.cs.ucie.digital
+package d2dadapter
 
 import chisel3._
 //import chisel3.util._
@@ -7,7 +19,7 @@ import chisel3._
 import interfaces._
 import sideband._
 
-class D2DAdapterIO (val fdiParams: FdiParams, val rdiParams: RdiParams) extends Bundle {
+class D2DAdapterIO (val fdiParams@@: FdiParams, val rdiParams: RdiParams) extends Bundle {
     val fdi = Flipped(new Fdi(fdiParams))
     val rdi = new Rdi(rdiParams)
 }
@@ -163,3 +175,9 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     val parity_check_result = parity_generator.io.parity_check_result
     val parity_check_result_valid = parity_generator.io.parity_check_result_valid
 }
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: 

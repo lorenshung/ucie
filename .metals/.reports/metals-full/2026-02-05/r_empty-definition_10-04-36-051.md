@@ -1,4 +1,15 @@
-package edu.berkeley.cs.ucie.digital.d2dadapter
+error id: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala:`<error>`#
+file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala
+empty definition using pc, found symbol in pc: 
+empty definition using semanticdb
+
+found definition using fallback; symbol D2DSidebandModule
+offset: 1096
+uri: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala
+text:
+```scala
+package edu.berkeley.cs.ucie.digital
+package d2dadapter
 
 import chisel3._
 //import chisel3.util._
@@ -33,7 +44,7 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     val fdi_stall_handler = Module(new FDIStallHandler())
     val rdi_stall_handler = Module(new RDIStallHandler())
 
-    val d2d_sideband = Module(new D2DSidebandModule(fdiParams, sbParams))
+    val d2d_sideband = Module(new D2D@@SidebandModule(fdiParams, sbParams))
     val d2d_mainband = Module(new D2DMainbandModule(fdiParams, rdiParams, sbParams))
 
     val parity_generator = Module(new ParityGenerator(fdiParams))
@@ -163,3 +174,9 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     val parity_check_result = parity_generator.io.parity_check_result
     val parity_check_result_valid = parity_generator.io.parity_check_result_valid
 }
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: 

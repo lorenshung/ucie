@@ -1,4 +1,4 @@
-package edu.berkeley.cs.ucie.digital.d2dadapter
+error id: file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala:[39..45) in Input.VirtualFile("file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala", "package edu.berkeley.cs.ucie.digital.
 
 import chisel3._
 //import chisel3.util._
@@ -162,4 +162,44 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     // Store these into some MMIO based registers
     val parity_check_result = parity_generator.io.parity_check_result
     val parity_check_result_valid = parity_generator.io.parity_check_result_valid
-}
+}")
+file://<WORKSPACE>/file:<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala
+file://<WORKSPACE>/scala/src/main/scala/d2dadapter/D2DAdapter.scala:3: error: expected identifier; obtained import
+
+
+Current stack trace:
+java.base/java.lang.Thread.getStackTrace(Thread.java:1619)
+scala.meta.internal.mtags.ScalaToplevelMtags.failMessage(ScalaToplevelMtags.scala:1206)
+scala.meta.internal.mtags.ScalaToplevelMtags.$anonfun$reportError$1(ScalaToplevelMtags.scala:1192)
+scala.meta.internal.metals.StdReporter.$anonfun$create$1(ReportContext.scala:148)
+scala.util.Try$.apply(Try.scala:217)
+scala.meta.internal.metals.StdReporter.create(ReportContext.scala:143)
+scala.meta.pc.reports.Reporter.create(Reporter.java:10)
+scala.meta.internal.mtags.ScalaToplevelMtags.reportError(ScalaToplevelMtags.scala:1189)
+scala.meta.internal.mtags.ScalaToplevelMtags.newIdentifier(ScalaToplevelMtags.scala:1095)
+scala.meta.internal.mtags.ScalaToplevelMtags.loop$1(ScalaToplevelMtags.scala:670)
+scala.meta.internal.mtags.ScalaToplevelMtags.parsePath(ScalaToplevelMtags.scala:679)
+scala.meta.internal.mtags.ScalaToplevelMtags.emitPackage(ScalaToplevelMtags.scala:652)
+scala.meta.internal.mtags.ScalaToplevelMtags.loop(ScalaToplevelMtags.scala:213)
+scala.meta.internal.mtags.ScalaToplevelMtags.indexRoot(ScalaToplevelMtags.scala:96)
+scala.meta.internal.metals.SemanticdbDefinition$.foreachWithReturnMtags(SemanticdbDefinition.scala:83)
+scala.meta.internal.metals.Indexer.indexSourceFile(Indexer.scala:546)
+scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3(Indexer.scala:677)
+scala.meta.internal.metals.Indexer.$anonfun$reindexWorkspaceSources$3$adapted(Indexer.scala:674)
+scala.collection.IterableOnceOps.foreach(IterableOnce.scala:630)
+scala.collection.IterableOnceOps.foreach$(IterableOnce.scala:628)
+scala.collection.AbstractIterator.foreach(Iterator.scala:1313)
+scala.meta.internal.metals.Indexer.reindexWorkspaceSources(Indexer.scala:674)
+scala.meta.internal.metals.MetalsLspService.$anonfun$onChange$2(MetalsLspService.scala:912)
+scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+scala.concurrent.Future$.$anonfun$apply$1(Future.scala:691)
+scala.concurrent.impl.Promise$Transformation.run(Promise.scala:500)
+java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+java.base/java.lang.Thread.run(Thread.java:840)
+
+import chisel3._
+^
+#### Short summary: 
+
+expected identifier; obtained import
