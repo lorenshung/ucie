@@ -1,0 +1,47 @@
+2026.02.05 10:00:09 INFO  Started: Metals version 1.6.4 in folders '/scratch/jfx/ucie-q2y26' for client Visual Studio Code - Insiders 1.108.0-insider.
+2026.02.05 10:00:09 WARN  Using H2 2.4.240 which is newer than the version Flyway has been verified with. The latest verified version of H2 is 2.3.232.
+2026.02.05 10:00:09 INFO  no build target found for /scratch/jfx/ucie-q2y26/scala/src/main/scala/d2dadapter/D2DAdapter.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2026.02.05 10:00:10 INFO  running '/usr/bin/sbt -Dbloop.export-jar-classifiers=sources bloopInstall'
+2026.02.05 10:00:10 ERROR [info] [launcher] getting org.scala-sbt sbt 1.9.9  (this may take some time)...
+Feb 05, 2026 10:00:11 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+Feb 05, 2026 10:00:11 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2026.02.05 10:00:12 INFO  no build target found for /scratch/jfx/ucie-q2y26/scala/src/main/scala/d2dadapter/D2DAdapter.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2026.02.05 10:00:18 ERROR [info] [launcher] getting Scala 2.12.18 (for sbt)...
+2026.02.05 10:00:19 INFO  [info] welcome to sbt 1.9.9 (Red Hat, Inc. Java 17.0.17)
+2026.02.05 10:00:20 INFO  [info] loading settings for project ucie-old-build-build-build from metals.sbt ...
+2026.02.05 10:00:20 INFO  [info] loading project definition from /scratch/jfx/ucie-q2y26/ucie-old/project/project/project
+2026.02.05 10:00:22 INFO  [info] loading settings for project ucie-old-build-build from metals.sbt ...
+2026.02.05 10:00:22 INFO  [info] loading project definition from /scratch/jfx/ucie-q2y26/ucie-old/project/project
+2026.02.05 10:00:26 INFO  [success] Generated .bloop/ucie-old-build-build.json
+2026.02.05 10:00:26 INFO  [success] Total time: 4 s, completed Feb 5, 2026, 10:00:26 AM
+2026.02.05 10:00:26 INFO  [info] loading settings for project ucie-old-build from metals.sbt,plugins.sbt ...
+2026.02.05 10:00:27 INFO  [info] loading project definition from /scratch/jfx/ucie-q2y26/ucie-old/project
+2026.02.05 10:00:28 INFO  [success] Generated .bloop/ucie-old-build.json
+2026.02.05 10:00:28 INFO  [success] Total time: 2 s, completed Feb 5, 2026, 10:00:28 AM
+2026.02.05 10:00:29 INFO  [info] loading settings for project ucie-old from build.sbt ...
+2026.02.05 10:00:29 INFO  [info] set current project to ucie_digital (in build file:/scratch/jfx/ucie-q2y26/ucie-old/)
+2026.02.05 10:00:33 INFO  no build target found for /scratch/jfx/ucie-q2y26/scala/src/main/scala/d2dadapter/D2DAdapter.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2026.02.05 10:00:33 INFO  no build target found for /scratch/jfx/ucie-q2y26/scala/src/main/scala/d2dadapter/D2DAdapter.scala. Using presentation compiler with project's scala-library version: 3.3.6
+2026.02.05 10:00:47 INFO  [success] Generated .bloop/ucie-old.json
+2026.02.05 10:00:47 INFO  [success] Generated .bloop/ucie-old-test.json
+2026.02.05 10:00:47 INFO  [success] Total time: 18 s, completed Feb 5, 2026, 10:00:47 AM
+2026.02.05 10:00:47 INFO  time: ran 'sbt bloopInstall' in 37s
+2026.02.05 10:00:47 INFO  Attempting to connect to the build server...
+2026.02.05 10:00:47 INFO  No running Bloop server found, starting one.
+2026.02.05 10:00:47 INFO  Starting compilation server
+2026.02.05 10:00:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /scratch/jfx/ucie-q2y26/.metals/bsp.trace.json or /users/yf328/.cache/metals/bsp.trace.json
+2026.02.05 10:00:51 INFO  time: Connected to build server in 3.24s
+2026.02.05 10:00:51 INFO  Connected to Build server: Bloop v2.0.17
+2026.02.05 10:00:51 INFO  time: Imported build in 0.11s
+2026.02.05 10:00:51 WARN  2.13.10 is no longer supported in the current Metals versions, using the last known supported version 1.3.3
+2026.02.05 10:00:53 WARN  Could not find java sources in /usr/lib/jvm/src.zip, /usr/lib/jvm/lib/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.17.0.10-1.el9.x86_64/src.zip, /usr/lib/jvm/java-17-openjdk-17.0.17.0.10-1.el9.x86_64/lib/src.zip. Java symbols will not be available.
+2026.02.05 10:00:55 INFO  time: indexed workspace in 4.14s
+2026.02.05 10:00:55 WARN  no build target for: /scratch/jfx/ucie-q2y26/scala/src/main/scala/d2dadapter/D2DAdapter.scala
+2026.02.05 10:00:55 INFO  no build target found for /scratch/jfx/ucie-q2y26/scala/src/main/scala/d2dadapter/D2DAdapter.scala. Using presentation compiler with project's scala-library version: 2.13.18
+2026.02.05 10:00:55 WARN  no build target for: /scratch/jfx/ucie-q2y26/scala/src/main/scala/d2dadapter/D2DAdapter.scala
+2026.02.05 10:00:57 INFO  time: code lens generation in 2.04s
+2026.02.05 10:00:57 INFO  time: code lens generation in 2.04s
+Feb 05, 2026 10:01:09 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
