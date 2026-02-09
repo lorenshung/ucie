@@ -38,6 +38,9 @@ class LinkManagementControllerIO (val fdiParams: FdiParams,
   * LinkManagementController for top level FDI/RDI state machine implementation, 
   * decoding the sideband messages and arbitration of triggers for the D2D adapter
   * state machine
+  * 
+  * Spec Reference: Section 8.1 (Link Management Controller)
+  * 
   * @param fdiParams FdiParams
   * @param rdiParams RdiParams
   * @param sbParams SidebandParams
@@ -47,6 +50,7 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
                                 val sbParams: SidebandParams) extends Module {
     val io = IO(new LinkManagementControllerIO(fdiParams, rdiParams))
 
+    // Spec Reference: Section 8.1.1 (Link Management Submodules)
     // Submodule instantiations
     // Disabled submodule
     val disabled_submodule = Module(new LinkDisabledSubmodule())
@@ -141,6 +145,7 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
     parity_negotiation_submodule.io.parity_tx_sw_en := io.parity_tx_sw_en
     parity_negotiation_submodule.io.cycles_1us := io.cycles_1us
 
+    // Spec Reference: Section 8.3.4 (Link Error State)
     // FDI/RDI common state change triggers
     // LinkError logic
     // PHY informs the adapter over RDI that it is in linkError state
@@ -149,12 +154,15 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
     //val linkerror_fdi_req = io.fdi_lp_linkerror
     // Placeholder for any other internal request logic which can trigger linkError
 
+    // Spec Reference: Section 8.4.1 (Stall Handshake Completion)
     val stallhandler_handshake_done = linkmgmt_stallreq_reg & io.linkmgmt_stalldone
 
+    // Spec Reference: Section 8.1.2 (RX Active/Deactive Status)
     // rx_deactive and rx_active signals for checking if rx on mainband is disabled
     val rx_deactive = ~(io.fdi_lp_rx_active_sts) & ~(io.fdi_pl_rx_active_req)
     val rx_active = io.fdi_lp_rx_active_sts & io.fdi_pl_rx_active_req
 
+    // Spec Reference: Section 8.3.3 (Retrain State)
     // PHY informs the adapter over RDI that it should go into retrain
     val retrain_phy_sts = (io.rdi_pl_state_sts === PhyState.retrain)
 
@@ -164,6 +172,7 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
     //                                    io.fdi_lp_state_req === PhyStateReq.reset) &&
     //                                    io.rdi_pl_state_sts === PhyState.reset)
 
+    // Spec Reference: Section 8.4.1 (Stall Request Arbitration)
     // stall arbitration
     when(link_state_reg === PhyState.active) {
         linkmgmt_stallreq_reg := linkreset_entry || disabled_entry || retrain_phy_sts
@@ -171,6 +180,7 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
         linkmgmt_stallreq_reg := false.B
     }
 
+    // Spec Reference: Section 8.1.3 (RX Active Request Arbitration)
     // rxActive arbitration
     when(link_state_reg === PhyState.active){
         when(linkreset_entry || disabled_entry || retrain_phy_sts || linkerror_phy_sts){
@@ -186,6 +196,7 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
         }
     }
 
+    // Spec Reference: Section 8.1.4 (Inband Presence Arbitration)
     // inband presence arbitration
     when(link_state_reg === PhyState.reset){
         when(linkerror_phy_sts){
@@ -291,9 +302,11 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
         }
     }
 
+    // Spec Reference: Section 8.1.5 (FDI/RDI State Machine)
     // FDI/RDI state machine. We use the same SM for optimized code as the spec
     // seems to trigger the state machines in tandem with no intermediate signalling 
     switch(link_state_reg) {
+        // Spec Reference: Section 8.3.5.1 (Reset State Transitions)
         // RESET
         is(PhyState.reset){
             when(linkerror_phy_sts) {
@@ -309,6 +322,7 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
                 link_state_reg := link_state_reg
             }
         }
+        // Spec Reference: Section 8.2.2 (Active State Transitions)
         // ACTIVE
         is(PhyState.active) {
             when(linkerror_phy_sts) {
@@ -323,6 +337,7 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
                 link_state_reg := link_state_reg
             }
         }
+        // Spec Reference: Section 8.3.3.1 (Retrain State Transitions)
         // RETRAIN
         // TODO: Retrain to active without L1 and L2 happens through lp_state_req
         // should not require the linkinit to happen again? 
@@ -337,6 +352,7 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
                 link_state_reg := link_state_reg
             }
         }
+        // Spec Reference: Section 8.3.4.2 (Link Error Exit)
         // LINKERROR
         is(PhyState.linkError) {
             // TODO: Check this logic, also needs state change on internal reset request
@@ -348,6 +364,7 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
                     link_state_reg := link_state_reg
                 }
         }
+        // Spec Reference: Section 8.3.1.1 (Disabled State Transitions)
         // DISABLED
         is(PhyState.disabled) {
             when(linkerror_phy_sts) {
@@ -359,6 +376,7 @@ class LinkManagementController (val fdiParams: FdiParams, val rdiParams: RdiPara
                 link_state_reg := link_state_reg
             }
         }
+        // Spec Reference: Section 8.3.2.1 (Link Reset State Transitions)
         // LINKRESET
         is(PhyState.linkReset) {
             when(linkerror_phy_sts) {

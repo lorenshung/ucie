@@ -6,6 +6,7 @@ import chisel3._
 
 import interfaces._
 
+// Spec Reference: Section 9.2 (Parity Generator Interface)
 class ParityGeneratorIO(fdiParams: FdiParams) extends Bundle{
     val snd_data = Input(Vec(fdiParams.width, UInt(8.W)))
     //val snd_data = Input(Bits((8 * fdiParams.width).W))
@@ -30,12 +31,15 @@ class ParityGeneratorIO(fdiParams: FdiParams) extends Bundle{
 
 }
 
+// Spec Reference: Section 9.2 (Parity Generator Module)
 class ParityGenerator(fdiParams: FdiParams) extends Module{
     val io = IO(new ParityGeneratorIO(fdiParams))
 
+    // Spec Reference: Section 9.2.1 (Parity Data Storage)
     val parity_data_snd_reg = RegInit(VecInit(Seq.fill(ParityAmount.PARITY_DATA_NBYTE_4)(false.B)))// all parity data
     val parity_data_rcv_reg = RegInit(VecInit(Seq.fill(ParityAmount.PARITY_DATA_NBYTE_4)(false.B)))// all parity data
 
+    // Spec Reference: Section 9.2.2 (Parity Counters)
     val parity_dcount_snd_reg = RegInit(0.U(19.W)) // number of data has sent by the protocol
     val parity_pcount_snd_reg = RegInit(0.U(9.W)) // number of parity has sent
     val parity_dcount_rcv_reg = RegInit(0.U(19.W)) // number of data has received from the phy
@@ -65,6 +69,7 @@ class ParityGenerator(fdiParams: FdiParams) extends Module{
         n_256_256 := ParityAmount.DATA_NBYTE_1.U
     }
 
+    // Spec Reference: Section 9.2.3 (Parity Generation - Transmit Path)
     // snd data add parity
     when(io.rdi_state =/= PhyState.active){
         for( i <- 0 until ParityAmount.PARITY_DATA_NBYTE_4){
@@ -148,7 +153,10 @@ class ParityGenerator(fdiParams: FdiParams) extends Module{
     for( i <- 0 until fdiParams.width){
         io.parity_data(i) := parity_data_snd_reg(i)
     }
+    // Spec Reference: Section 9.2.4 (Parity Insert Signal Generation)
     io.parity_insert := parity_dcount_snd_reg === n_256_256
+    
+    // Spec Reference: Section 9.2.5 (Parity Checking - Receive Path)
     // rcv data, check parity
     val parity_check_result_valid_reg = RegInit(false.B)
     io.parity_check_result_valid := parity_check_result_valid_reg
@@ -243,12 +251,15 @@ class ParityGenerator(fdiParams: FdiParams) extends Module{
         parity_check_result_valid_reg := false.B
     }
 
+    // Spec Reference: Section 9.2.6 (Parity Check Signal Generation)
     io.parity_check := (parity_dcount_rcv_reg === n_256_256)
 
+    // Spec Reference: Section 9.2.7 (Parity Check Result Storage)
     val parity_check_bits_reg = RegInit(VecInit(Seq.fill(ParityAmount.PARITY_DATA_NBYTE_4)(false.B)))
 
     io.parity_check_result := parity_check_bits_reg
     
+    // Spec Reference: Section 9.2.8 (Parity Comparison Logic)
     when(parity_dcount_rcv_reg === n_256_256 && io.rcv_data_vld){// this data should be checked{
         when(io.parity_n === ParityN.ONE){
             for( i <- 0 until ParityAmount.PARITY_DATA_NBYTE_1 - fdiParams.width){

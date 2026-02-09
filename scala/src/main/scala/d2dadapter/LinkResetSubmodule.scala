@@ -18,6 +18,7 @@ class LinkResetSubmoduleIO() extends Bundle {
   * Reset, Active, and Retrain to LinkReset state. The transition is triggered
   * by fdi_lp_state_req or though sideband messages coming from partner link.
   * 
+  * Spec Reference: Section 8.3.2 (Link Reset State Transition)
   */
 // This is a modified copy of LinkResetSubmodule.scala file
 class LinkResetSubmodule() extends Module {
@@ -29,6 +30,7 @@ class LinkResetSubmodule() extends Module {
   val linkreset_sbmsg_ext_rsp_reg = RegInit(false.B) // receive and respond to sb linkreset request
   val linkreset_sbmsg_ext_req_reg = RegInit(false.B) // send and wait for sb linkreset response
 
+  // Spec Reference: Section 8.3.2.1 (Link Reset Entry Conditions)
   when(
       io.link_state === PhyState.reset ||
       io.link_state === PhyState.active ||
@@ -37,6 +39,7 @@ class LinkResetSubmodule() extends Module {
 
     io.linkreset_entry := linkreset_sbmsg_ext_rsp_reg || linkreset_sbmsg_rsp_rcv_flag
 
+    // Spec Reference: Section 8.3.2.2 (FDI State Request Handling)
     // State change request by fdi
     when(
       io.link_state === PhyState.reset &&
@@ -80,6 +83,7 @@ class LinkResetSubmodule() extends Module {
       linkreset_sbmsg_rsp_rcv_flag := linkreset_sbmsg_rsp_rcv_flag
     }
 
+    // Spec Reference: Section 8.3.2.3 (Sideband Message Generation Logic)
     // TODO: Check if this logic works on all corner cases
     // lp_state_req triggers sideband message
     when(linkreset_fdi_req_reg && !linkreset_sbmsg_req_rcv_flag &&

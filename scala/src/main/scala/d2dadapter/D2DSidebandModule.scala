@@ -8,10 +8,12 @@ import interfaces._
 import sideband._
 
 
+// Spec Reference: Section 8.2.1.2 (Advertised Capabilities Message Format)
 object D2DSidebandConstant{
     val ADV_CAP_MESSAGE_DATA = "b0000000000000000000000000000000000000000000000000000000010010001".U// Raw mod [0], streaming [4], Stack0_Enable [7]
 }
 
+// Spec Reference: Section 7.1 (Sideband Channel Interface)
 class D2DSidebandModuleIO(val fdiParams: FdiParams) extends Bundle{
     val fdi_pl_cfg = Output(UInt(fdiParams.sbWidth.W))
     val fdi_pl_cfg_vld = Output(Bool())
@@ -33,11 +35,15 @@ class D2DSidebandModuleIO(val fdiParams: FdiParams) extends Bundle{
     val sideband_rdy = Output(Bool())// sideband can consume the op in sideband_snt. 
 }
 
+// Spec Reference: Section 7.1 (Sideband Channel Module)
 class D2DSidebandModule(val fdiParams: FdiParams, val sbParams: SidebandParams) extends Module{
     val io = IO(new D2DSidebandModuleIO(fdiParams))
 
+    // Spec Reference: Section 7.1.1 (Sideband Node Instantiations)
     val fdi_sideband_node = Module(new SidebandNode(sbParams, fdiParams))
     val rdi_sideband_node = Module(new SidebandNode(sbParams, fdiParams))
+    
+    // Spec Reference: Section 7.1.2 (Sideband Message Routing)
     val sideband_switch = Module(new sidebandSwitcher(myID = 1, sbParams = sbParams))
 
     io.fdi_pl_cfg := fdi_sideband_node.io.outer.tx.bits
@@ -67,6 +73,7 @@ class D2DSidebandModule(val fdiParams: FdiParams, val sbParams: SidebandParams) 
     sideband_switch.io.inner.node_to_layer_below.ready := true.B
     sideband_switch.io.inner.node_to_layer_above.ready := true.B
 
+    // Spec Reference: Section 7.3 (Sideband Message Decoding)
     when(sideband_switch.io.inner.node_to_layer_below.valid && sideband_switch.io.inner.node_to_layer_below.ready){
         when(sideband_switch.io.inner.node_to_layer_below.bits === SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE){
             io.sideband_rcv := SideBandMessage.REQ_ACTIVE
@@ -106,6 +113,7 @@ class D2DSidebandModule(val fdiParams: FdiParams, val sbParams: SidebandParams) 
     }
     
 
+    // Spec Reference: Section 7.3 (Sideband Message Encoding)
     when(io.sideband_snt =/= SideBandMessage.NOP){
         when(io.sideband_snt === SideBandMessage.REQ_ACTIVE){
             sideband_switch.io.inner.layer_to_node_below.bits := SBMessage_factory.apply(base = SBM.LINK_MGMT_ADAPTER0_REQ_ACTIVE, src = "D2D", remote = true, dst = "D2D")

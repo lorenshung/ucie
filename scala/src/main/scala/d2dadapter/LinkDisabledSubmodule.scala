@@ -20,6 +20,7 @@ class LinkDisabledSubmoduleIO() extends Bundle {
   * triggered by fdi_lp_state_req or though sideband messages coming from
   * partner link.
   * 
+  * Spec Reference: Section 8.3.1 (Disabled State Transition)
   */
 class LinkDisabledSubmodule() extends Module {
   val io = IO(new LinkDisabledSubmoduleIO())
@@ -30,6 +31,7 @@ class LinkDisabledSubmodule() extends Module {
   val disabled_sbmsg_ext_rsp_reg = RegInit(false.B) // receive and respond to sb disabled request
   val disabled_sbmsg_ext_req_reg = RegInit(false.B) // send and wait for sb disabled response
 
+  // Spec Reference: Section 8.3.1.1 (Disabled State Entry Conditions)
   when(
       io.link_state === PhyState.reset ||
       io.link_state === PhyState.active ||
@@ -38,6 +40,7 @@ class LinkDisabledSubmodule() extends Module {
   ) {
     io.disabled_entry := disabled_sbmsg_ext_rsp_reg || disabled_sbmsg_rsp_rcv_reg
 
+    // Spec Reference: Section 8.3.1.2 (FDI State Request Handling)
     // State change request by fdi
     when(
       io.link_state === PhyState.reset &&
@@ -54,6 +57,7 @@ class LinkDisabledSubmodule() extends Module {
       disabled_fdi_req_reg := disabled_fdi_req_reg
     }
 
+    // Spec Reference: Section 8.3.1.3 (Sideband Message State Tracking)
     when(io.disabled_sb_snd === SideBandMessage.REQ_DISABLED && io.disabled_sb_rdy){
       disabled_sbmsg_ext_req_reg := true.B
     }.otherwise{
@@ -65,6 +69,8 @@ class LinkDisabledSubmodule() extends Module {
     }.otherwise{
       disabled_sbmsg_ext_rsp_reg := disabled_sbmsg_ext_rsp_reg
     }
+    
+    // Spec Reference: Section 8.3.1.4 (Sideband Message Reception)
     // Check whether there is inflight disabled request sbmsg from partner link
     when(io.disabled_sb_rcv === SideBandMessage.REQ_DISABLED) {
       disabled_sbmsg_req_rcv_reg := true.B
@@ -80,6 +86,7 @@ class LinkDisabledSubmodule() extends Module {
       disabled_sbmsg_rsp_rcv_reg := disabled_sbmsg_rsp_rcv_reg
     }
 
+    // Spec Reference: Section 8.3.1.5 (Sideband Message Generation Logic)
     // TODO: Check if this logic works on all corner cases
     // lp_state_req triggers sideband message
     // TODO: find a way to enable valid without probing ready

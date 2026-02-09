@@ -4,6 +4,7 @@ import chisel3._
 //import chisel3.util._
 //import chisel3.experimental._
 
+// Spec Reference: Section 9.3 (Parity Negotiation Interface)
 class ParityNegotiationSubmoduleIO() extends Bundle{
     val start_negotiation = Input(Bool())
     val negotiation_complete = Output(Bool())
@@ -21,9 +22,11 @@ class ParityNegotiationSubmoduleIO() extends Bundle{
 }
 
 
+// Spec Reference: Section 9.3 (Parity Negotiation Module)
 class ParityNegotiationSubmodule() extends Module{
     val io = IO(new ParityNegotiationSubmoduleIO())
 
+    // Spec Reference: Section 9.3.1 (Parity Negotiation State Tracking)
     val parity_rsp_snt_flag_reg = RegInit(false.B)
     val parity_req_snt_flag_reg = RegInit(false.B)
     val parity_req_rcv_flag_reg = RegInit(false.B)
@@ -31,6 +34,7 @@ class ParityNegotiationSubmodule() extends Module{
     val parity_rx_enable_reg = RegInit(false.B)
     val parity_tx_enable_reg = RegInit(false.B)
 
+    // Spec Reference: Section 9.3.2 (Parity Negotiation Timeout)
     val parity_req_timeout_counter_reg = RegInit(0.U(32.W))
 
     val timeout = io.cycles_1us << 2 // 8ms
@@ -38,13 +42,16 @@ class ParityNegotiationSubmodule() extends Module{
     io.parity_rx_enable := parity_rx_enable_reg
     io.parity_tx_enable := parity_tx_enable_reg
 
+    // Spec Reference: Section 9.3.3 (Parity Negotiation State Machine)
 //state_reg === InterfaceStatus.RETRAIN && !retrain_from_L1_reg && io.fdi_lp_state_req =/= StateReq.ACTIVE
     when(io.start_negotiation){
 
+        // Spec Reference: Section 9.3.3.1 (Negotiation Completion Logic)
         val reqcomplete = !io.parity_tx_sw_en | parity_rsp_rcv_flag_reg
         val rspcomplete = parity_req_timeout_counter_reg === timeout | parity_rsp_snt_flag_reg
         io.negotiation_complete :=  reqcomplete & rspcomplete
 
+        // Spec Reference: Section 9.3.3.2 (Sideband Message Generation)
         when(io.parity_tx_sw_en && !parity_req_snt_flag_reg){
             io.parity_sb_snd := SideBandMessage.PARITY_FEATURE_REQ
         }.elsewhen(io.parity_rx_sw_en && parity_req_rcv_flag_reg && !parity_rsp_snt_flag_reg){
@@ -96,6 +103,7 @@ class ParityNegotiationSubmodule() extends Module{
             parity_rsp_snt_flag_reg := parity_rsp_snt_flag_reg
         }
 
+        // Spec Reference: Section 9.3.3.3 (Parity Enable Signal Generation)
         when(io.parity_sb_rcv === SideBandMessage.PARITY_FEATURE_ACK){
             parity_tx_enable_reg := true.B
         }.elsewhen(io.parity_sb_rcv === SideBandMessage.PARITY_FEATURE_NAK || !io.parity_tx_sw_en){
