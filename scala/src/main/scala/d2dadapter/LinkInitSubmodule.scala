@@ -32,22 +32,18 @@ class LinkInitSubmoduleIO() extends Bundle {
   * they need to go through the link initialization i.e., the RDI bringup,
   * the parameter negotiations and the FDI bringup. This is handled inside
   * this linkInit submodule.
-  * 
-  * Spec Reference: Section 8.2.1 (Link Initialization)
+  *
   */
 class LinkInitSubmodule() extends Module {
     val io = IO(new LinkInitSubmoduleIO())
 
-    // Spec Reference: Section 8.2.1.1 (Link Initialization State Machine)
     // State register for link initialization 
     val linkinit_state_reg = RegInit(LinkInitState.INIT_START)
 
-    // Spec Reference: Section 8.2.1.2 (Parameter Exchange Sideband Message Tracking)
     // Parameter exchange on sideband message arbitration flags
     val param_exch_sbmsg_rcv_flag = RegInit(false.B)
     val param_exch_sbmsg_snt_flag = RegInit(false.B)
 
-    // Spec Reference: Section 8.2.2.1 (Active State Sideband Message Tracking)
     // Active state sb message arbitration flags
     val active_sbmsg_req_rcv_flag = RegInit(false.B)
     val active_sbmsg_rsp_rcv_flag = RegInit(false.B)
@@ -78,9 +74,7 @@ class LinkInitSubmodule() extends Module {
       active_sbmsg_ext_req_reg := false.B
       transition_to_active_reg := false.B
 
-      // Spec Reference: Section 8.2.1.3 (Link Initialization State Transitions)
       switch(linkinit_state_reg) {
-        // Spec Reference: Section 8.2.1.3.1 (INIT_START State)
         // INIT START
         is(LinkInitState.INIT_START) {
             io.active_entry := false.B
@@ -93,7 +87,6 @@ class LinkInitSubmodule() extends Module {
               linkinit_state_reg := linkinit_state_reg
             }
         }
-        // Spec Reference: Section 8.2.1.3.2 (RDI_BRINGUP State)
         // RDI BRINGUP
         is(LinkInitState.RDI_BRINGUP) {
             io.linkinit_rdi_lp_state_req := PhyStateReq.active
@@ -103,7 +96,6 @@ class LinkInitSubmodule() extends Module {
               linkinit_state_reg := linkinit_state_reg
             }
         }
-        // Spec Reference: Section 8.2.1.3.3 (PARAM_EXCH State)
         // PARAMETER EXCHANGE
         is(LinkInitState.PARAM_EXCH) {
             io.linkinit_rdi_lp_state_req := PhyStateReq.active
@@ -135,7 +127,6 @@ class LinkInitSubmodule() extends Module {
                 linkinit_state_reg := linkinit_state_reg
             }
         }
-        // Spec Reference: Section 8.2.1.3.4 (FDI_BRINGUP State)
         // FDI BRINGUP
         is(LinkInitState.FDI_BRINGUP) {
             io.linkinit_fdi_pl_inband_pres := true.B
@@ -192,7 +183,6 @@ class LinkInitSubmodule() extends Module {
               linkinit_state_reg := linkinit_state_reg
             }
         }
-        // Spec Reference: Section 8.2.1.3.5 (INIT_DONE State)
         // INIT DONE
         is(LinkInitState.INIT_DONE) {
             io.active_entry := true.B

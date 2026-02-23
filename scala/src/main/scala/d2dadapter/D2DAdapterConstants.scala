@@ -5,7 +5,6 @@ import chisel3._
 //import interfaces._
 //import sideband._
 
-// Spec Reference: Section 8.2.1 (Link Initialization State Machine)
 // LinkInitModule constants
 
 object LinkInitState extends ChiselEnum {
@@ -16,7 +15,6 @@ object LinkInitState extends ChiselEnum {
     val INIT_DONE = Value(0x4.U(3.W))     // Spec: Initialization complete, ready for Active state
 }
 
-// Spec Reference: Section 7.3 (Sideband Message Encodings)
 // Sideband constants
 
 object D2DAdapterSignalSize{
@@ -24,48 +22,36 @@ object D2DAdapterSignalSize{
 }
 
 object SideBandMessage{
-    // Spec Reference: Section 7.3.1 (Sideband Message Format)
     // start with 01: RES
     // start with 00: REQ
     // start with 1: others
     val NOP: UInt = "b000000".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     
-    // Spec Reference: Section 8.2.2.1 (Active State Request/Response)
     val REQ_ACTIVE: UInt = "b000001".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     val RSP_ACTIVE: UInt = "b010001".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     
-    // Spec Reference: Section 8.2.3 (L1 Power State Request/Response)
     val REQ_L1: UInt = "b000100".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     val RSP_L1: UInt = "b010100".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     
-    // Spec Reference: Section 8.2.4 (L2 Power State Request/Response)
     val REQ_L2: UInt = "b001000".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     val RSP_L2: UInt = "b011000".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     
-    // Spec Reference: Section 8.3.2 (Link Reset Request/Response)
     val REQ_LINKRESET: UInt = "b001001".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     val RSP_LINKRESET: UInt = "b011001".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     
-    // Spec Reference: Section 8.3.1 (Disabled State Request/Response)
     val REQ_DISABLED: UInt = "b001100".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     val RSP_DISABLED: UInt = "b011100".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     
-    // Spec Reference: Section 8.2.2.2 (Power Management Negative Acknowledge)
     val RSP_PMNAK: UInt = "b010011".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     
-    // Spec Reference: Section 9.3.2 (Parity Feature Negotiation Messages)
     val PARITY_FEATURE_REQ: UInt = "b100001".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     val PARITY_FEATURE_ACK: UInt = "b110001".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     val PARITY_FEATURE_NAK: UInt = "b110010".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
     
-    // Spec Reference: Section 8.2.1.2 (Advertised Capabilities Message)
     val ADV_CAP: UInt = "b100100".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
-    
-    // Spec Reference: Section 7.4 (Register Access Messages)
     val REGISTER_ACCESS: UInt = "b101000".U(D2DAdapterSignalSize.SIDEBAND_MESSAGE_OP_WIDTH)
 }
 
-// Spec Reference: Section 8.4 (Stall Handshake Protocol State Machine)
 // Stall Handler constants
 
 object StallHandlerWidth{
@@ -79,14 +65,12 @@ object StallHandshakeState extends ChiselEnum{
     val COMPLETE = Value(0x3.U(StallHandlerWidth.STATE_WIDTH))   // Spec: Stall handshake complete
 }
 
-// Spec Reference: Section 9.2 (Parity Generation and Checking)
 // Parity module constants
 
 object ParityGeneratorWidth{
     val PARITY_N_WIDTH = 3.W
 }
 
-// Spec Reference: Section 9.2.1 (Parity Block Sizes)
 object ParityAmount{
     val BASESIZE: Int = 64
     val PARITY_DATA_NBYTE_1: Int = 64      // Spec: 1 parity block = 64 bytes
@@ -98,7 +82,6 @@ object ParityAmount{
     val CORRECT_REG_WIDTH = 256.W // 4 * 64 for maximum four 64Bytes parity
 }
 
-// Spec Reference: Section 9.2.2 (Parity Block Count Configuration)
 object ParityN{
     val ONE: UInt = "b000".U   // Spec: 1 parity block per data block
     val TWO: UInt = "b001".U   // Spec: 2 parity blocks per data block

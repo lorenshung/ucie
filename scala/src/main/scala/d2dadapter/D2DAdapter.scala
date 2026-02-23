@@ -7,7 +7,6 @@ import chisel3._
 import interfaces._
 import sideband._
 
-// Spec Reference: Section 6.2 (FDI Interface), Section 6.3 (RDI Interface)
 class D2DAdapterIO (val fdiParams: FdiParams, val rdiParams: RdiParams) extends Bundle {
     val fdi = Flipped(new Fdi(fdiParams))
     val rdi = new Rdi(rdiParams)
@@ -19,38 +18,28 @@ class D2DAdapterIO (val fdiParams: FdiParams, val rdiParams: RdiParams) extends 
   * 2) SB node
   * 3) MB node
   * 4) FDI and RDI stall handlers
-  * 
-  * Spec Reference: Section 6.1 (D2D Adapter Overview)
-  * 
   * @param fdiParams
   * @param rdiParams
   * @param sbParams
   */
-class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams, 
+class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
                  val sbParams: SidebandParams) extends Module {
     val io = IO(new D2DAdapterIO(fdiParams, rdiParams))
 
-    // Spec Reference: Section 6.1.1 (D2D Adapter Parameter Requirements)
     assert(fdiParams.width == rdiParams.width)
     assert(fdiParams.sbWidth == rdiParams.sbWidth)
 
-    // Spec Reference: Section 8.1 (Link Management Controller)
     val link_manager = Module(new LinkManagementController(fdiParams, rdiParams, sbParams))
     
-    // Spec Reference: Section 8.4 (Stall Handshake Protocol)
     val fdi_stall_handler = Module(new FDIStallHandler())
     val rdi_stall_handler = Module(new RDIStallHandler())
 
-    // Spec Reference: Section 7.1 (Sideband Channel)
     val d2d_sideband = Module(new D2DSidebandModule(fdiParams, sbParams))
     
-    // Spec Reference: Section 6.2.1 (Mainband Data Path)
     val d2d_mainband = Module(new D2DMainbandModule(fdiParams, rdiParams, sbParams))
 
-    // Spec Reference: Section 9.2 (Parity Generation and Checking)
     val parity_generator = Module(new ParityGenerator(fdiParams))
 
-    // Spec Reference: Section 6.2.2 (FDI Protocol Layer Interface Defaults)
     // default assignments for the FDI and RDI interfaces
     io.fdi.plProtocolValid := true.B
     io.fdi.plProtocolFlitFormat := FlitFormat.raw
@@ -59,13 +48,11 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     io.fdi.plLinkWidth := io.rdi.plLinkWidth
     io.fdi.plFlitCancel := false.B 
 
-    // Spec Reference: Section 6.2.3 (FDI Error Signals)
     io.fdi.plNfError := false.B
     io.fdi.plTrainError := false.B
     io.fdi.plError := false.B
     io.fdi.plCerror := false.B
 
-    // Spec Reference: Section 8.2 (Power Management States)
     io.fdi.plPhyInRecenter := false.B
     io.fdi.plPhyInL1 := false.B
     io.fdi.plPhyInL2 := false.B
@@ -73,18 +60,15 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     io.fdi.plDllp.valid := false.B
     io.fdi.plDllpOfc := false.B
 
-    // Spec Reference: Section 8.2.1 (Clock Request/Acknowledge)
     io.fdi.plClkReq := true.B
     io.rdi.lpClkAck := true.B
     io.fdi.plWakeAck := true.B
 
-    // Spec Reference: Section 6.3.2 (RDI Retimer Credit)
     io.fdi.plRetimerCrd := false.B
 
     io.rdi.lpRetimerCrd := false.B
     io.rdi.lpWakeReq := true.B
     
-    // Spec Reference: Section 8.1.1 (Link Management Controller FDI Interface)
     // link management controller
     // FDI interface
     link_manager.io.fdi_lp_state_req := io.fdi.lpStateReq
@@ -94,36 +78,30 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     io.fdi.plRxActiveReq := link_manager.io.fdi_pl_rx_active_req
     io.fdi.plInbandPres := link_manager.io.fdi_pl_inband_pres
     
-    // Spec Reference: Section 8.1.2 (Link Management Controller RDI Interface)
     // RDI interface
     io.rdi.lpLinkError := link_manager.io.rdi_lp_linkerror
     io.rdi.lpStateReq:= link_manager.io.rdi_lp_state_req
     link_manager.io.rdi_pl_state_sts := io.rdi.plStateStatus
     link_manager.io.rdi_pl_inband_pres := io.rdi.plInbandPres
 
-    // Spec Reference: Section 7.2 (Sideband Message Interface)
     // link manager <-> D2D sideband
     d2d_sideband.io.sideband_snt := link_manager.io.sb_snd
     link_manager.io.sb_rcv := d2d_sideband.io.sideband_rcv
     link_manager.io.sb_rdy := d2d_sideband.io.sideband_rdy
         
-    // Spec Reference: Section 8.4.1 (Stall Request/Done Handshake)
     // stall handler <-> LinkManagementController
     link_manager.io.linkmgmt_stalldone := fdi_stall_handler.io.linkmgmt_stalldone
     fdi_stall_handler.io.linkmgmt_stallreq := link_manager.io.linkmgmt_stallreq
 
-    // Spec Reference: Section 9.3.1 (Parity Negotiation Timing)
     //TODO: should move this to a MMIO register
     link_manager.io.cycles_1us := 1000.U
 
-    // Spec Reference: Section 9.3 (Parity Feature Negotiation)
     // parity generator <-> link manager
     link_manager.io.parity_tx_sw_en := false.B // TODO: this should be software triggered, MMIO regs?
     link_manager.io.parity_rx_sw_en := false.B // TODO: this should be software triggered, MMIO regs?
     parity_generator.io.parity_rx_enable := link_manager.io.parity_rx_enable
     parity_generator.io.parity_tx_enable := link_manager.io.parity_tx_enable
 
-    // Spec Reference: Section 7.1.1 (Sideband Channel Credit-Based Flow Control)
     // Sideband 
     io.fdi.plConfig.bits := d2d_sideband.io.fdi_pl_cfg
     io.fdi.plConfig.valid := d2d_sideband.io.fdi_pl_cfg_vld
@@ -139,16 +117,13 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     io.rdi.lpConfig.valid := d2d_sideband.io.rdi_lp_cfg_vld
     d2d_sideband.io.rdi_lp_cfg_crd := io.rdi.lpConfigCredit
 
-    // Spec Reference: Section 8.4.2 (FDI Stall Request/Acknowledge)
     // stall handler
     io.fdi.plStallReq := fdi_stall_handler.io.fdi_pl_stallreq
     fdi_stall_handler.io.fdi_lp_stallack := io.fdi.lpStallAck
 
-    // Spec Reference: Section 8.4.3 (RDI Stall Request/Acknowledge)
     rdi_stall_handler.io.rdi_pl_stallreq := io.rdi.plStallReq
     io.rdi.lpStallAck := rdi_stall_handler.io.rdi_lp_stallack
 
-    // Spec Reference: Section 6.2.1.1 (Mainband Data Path - FDI Interface)
     // mainband module
     // FDI
     d2d_mainband.io.fdi_lp_irdy := io.fdi.lpData.irdy
@@ -160,7 +135,6 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     io.fdi.plData.bits := d2d_mainband.io.fdi_pl_data
     io.fdi.plStream := d2d_mainband.io.fdi_pl_stream
     
-    // Spec Reference: Section 6.2.1.2 (Mainband Data Path - RDI Interface)
     // RDI
     io.rdi.lpData.irdy := d2d_mainband.io.rdi_lp_irdy
     io.rdi.lpData.valid := d2d_mainband.io.rdi_lp_valid
@@ -169,15 +143,12 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     d2d_mainband.io.rdi_pl_valid := io.rdi.plData.valid
     d2d_mainband.io.rdi_pl_data := io.rdi.plData.bits
 
-    // Spec Reference: Section 8.1.3 (Link State to Mainband)
     d2d_mainband.io.d2d_state := link_manager.io.fdi_pl_state_sts
 
-    // Spec Reference: Section 8.4.4 (Mainband Stall Coordination)
     // stall handler <-> mainband
     d2d_mainband.io.mainband_stallreq := rdi_stall_handler.io.mainband_stallreq
     rdi_stall_handler.io.mainband_stalldone := d2d_mainband.io.mainband_stalldone
     
-    // Spec Reference: Section 9.2.1 (Parity Data Interface)
     // parity generator <-> mainband
     //(Bits((8 * fdiParams.width).W))
     parity_generator.io.snd_data := d2d_mainband.io.snd_data.asTypeOf(Vec(fdiParams.width, UInt(8.W)))
@@ -189,7 +160,6 @@ class D2DAdapter(val fdiParams: FdiParams, val rdiParams: RdiParams,
     parity_generator.io.parity_rdy := d2d_mainband.io.parity_rdy
     d2d_mainband.io.parity_check := parity_generator.io.parity_check
 
-    // Spec Reference: Section 9.2.2 (Parity Configuration)
     // Parity generator submodule other IOs
     parity_generator.io.parity_n := ParityN.ONE
     parity_generator.io.rdi_state := io.rdi.plStateStatus

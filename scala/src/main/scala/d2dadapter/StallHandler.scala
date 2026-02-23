@@ -4,7 +4,6 @@ import chisel3._
 import chisel3.util._
 //import chisel3.experimental._
 
-// Spec Reference: Section 8.4.2 (FDI Stall Handler Interface)
 class FDIStallHandlerIO() extends Bundle{
     // FDI: send request
     // RDI: receive request and perform actual stall
@@ -14,7 +13,6 @@ class FDIStallHandlerIO() extends Bundle{
     val fdi_lp_stallack = Input(Bool())
 }
 
-// Spec Reference: Section 8.4.3 (RDI Stall Handler Interface)
 class RDIStallHandlerIO() extends Bundle{
     // FDI: send request
     // RDI: receive request and perform actual stall
@@ -24,7 +22,6 @@ class RDIStallHandlerIO() extends Bundle{
     val rdi_lp_stallack = Output(Bool())
 }
 
-// Spec Reference: Section 8.4.2 (FDI Stall Handler)
 class FDIStallHandler() extends Module{
     val io = IO(new FDIStallHandlerIO())
     val fdi_lp_stallreq_reg = RegInit(false.B)
@@ -33,7 +30,6 @@ class FDIStallHandler() extends Module{
     io.fdi_pl_stallreq := fdi_lp_stallreq_reg
     io.linkmgmt_stalldone := linkmgmt_stalldone_reg
 
-    // Spec Reference: Section 8.4.2.1 (Stall Handshake State Machine)
     val stall_handshake_state_reg = RegInit(StallHandshakeState.IDLE)
 
     stall_handshake_state_reg := stall_handshake_state_reg
