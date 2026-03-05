@@ -1,10 +1,10 @@
-package edu.berkeley.cs.ucie.digital
+package edu.berkeley.cs.uciedigital
 package protocol
 
 import chisel3._
 import chisel3.util._
 
-import interfaces._
+import edu.berkeley.cs.uciedigital.interfaces._
 import javax.swing.InputMap
 
 /**

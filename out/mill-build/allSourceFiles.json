@@ -1,0 +1,12 @@
+{
+    "value": [
+        "ref:v0:85d48804:/Users/lorenhung/ucie/out/mill-build/generatedScriptSources.dest/support/build_/BuildFileImpl.scala",
+        "ref:v0:46b88a2f:/Users/lorenhung/ucie/out/mill-build/generatedScriptSources.dest/support/build_/MillMiscInfo.scala",
+        "ref:v0:6c53be33:/Users/lorenhung/ucie/out/mill-build/generatedScriptSources.dest/wrapped/build_/build.mill"
+    ],
+    "valueHash": -1590035887,
+    "inputsHash": 891221117,
+    "millVersion": "1.1.2",
+    "millJvmVersion": "21.0.9",
+    "classLoaderSigHash": -1596153753
+}

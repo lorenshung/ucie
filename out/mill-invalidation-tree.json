@@ -1,0 +1,21 @@
+{
+  "scala.sources": {
+    "scala.allSources": {
+      "scala.allSourceFiles": {
+        "scala.compile": {
+          "scala.localRunClasspath": {
+            "scala.allLocalMainClasses": {
+              "scala.finalMainClassOpt": {
+                "scala.runMain": {}
+              }
+            },
+            "scala.localClasspath": {
+              "scala.runClasspath": {}
+            }
+          }
+        },
+        "scala.zincIncrementalCompilation": {}
+      }
+    }
+  }
+}

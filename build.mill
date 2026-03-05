@@ -1,0 +1,33 @@
+import mill.*
+import mill.scalalib.*
+// import millbuild.*
+
+object Deps {
+  val chisel = mvn"org.chipsalliance::chisel:6.7.0"
+  val chiselPlugin = mvn"org.chipsalliance:::chisel-plugin:6.7.0"
+  val chiseltest = mvn"edu.berkeley.cs::chiseltest:6.0.0"
+  // val rocketchip600 =
+  //   mvn"edu.berkeley.cs::rocketchip-6.0.0:1.6-6.0.0-1b9f43352-SNAPSHOT"
+  val scalatest = mvn"org.scalatest::scalatest:3.2.18"
+}
+
+
+object scala extends ScalaModule {
+
+  def mvnDeps = Seq(Deps.chisel)
+
+  def millSourcePath = os.pwd
+
+  def scalaVersion = "2.13.16"
+
+  def scalacOptions = Seq(
+    "-deprecation",
+    "-feature",
+    "-language:reflectiveCalls",
+    "-Xcheckinit",
+    "-Xlint"
+  )
+
+  def scalacPluginMvnDeps = Seq(Deps.chiselPlugin)
+
+}

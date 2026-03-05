@@ -1,8 +1,8 @@
-package edu.berkeley.cs.ucie.digital.d2dadapter
+package edu.berkeley.cs.uciedigital.d2dadapter
 
 import chisel3._
 //import chisel3.util._
-import interfaces._
+import edu.berkeley.cs.uciedigital.interfaces._
 
 class LinkResetSubmoduleIO() extends Bundle {
   val fdi_lp_state_req = Input(PhyStateReq())

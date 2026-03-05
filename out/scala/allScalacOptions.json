@@ -1,0 +1,15 @@
+{
+    "value": [
+        "-Xplugin:/Users/lorenhung/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/chipsalliance/chisel-plugin_2.13.16/6.7.0/chisel-plugin_2.13.16-6.7.0.jar",
+        "-deprecation",
+        "-feature",
+        "-language:reflectiveCalls",
+        "-Xcheckinit",
+        "-Xlint"
+    ],
+    "valueHash": 858489174,
+    "inputsHash": 2112603532,
+    "millVersion": "1.1.2",
+    "millJvmVersion": "21.0.9",
+    "classLoaderSigHash": 27397662
+}

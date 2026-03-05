@@ -11,6 +11,9 @@ case class AfeParams(
   sbWidth: Int = 1,
   mbSerializerRatio: Int = 32,
   mbLanes: Int = 16,
+  clockPhaseSelBitWidth: Int = 5,
+  vRefSelBitWidth: Int = 5,
+  numLinkOps: Int = 16,
   STANDALONE: Boolean = true
 )
 

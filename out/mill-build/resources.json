@@ -1,0 +1,11 @@
+{
+    "value": [
+        "ref:v0:c984eca8:/Users/lorenhung/ucie/mill-build/resources",
+        "ref:v0:30791d3d:/Users/lorenhung/ucie/out/mill-build/generatedScriptSources.dest/resources"
+    ],
+    "valueHash": -1853582108,
+    "inputsHash": -809738848,
+    "millVersion": "1.1.2",
+    "millJvmVersion": "21.0.9",
+    "classLoaderSigHash": -1596153753
+}

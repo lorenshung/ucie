@@ -1,0 +1,12 @@
+{
+    "value": [
+        "ref:v0:3a1d5b82:/Users/lorenhung/ucie/build.mill",
+        "ref:v0:c984eca8:/Users/lorenhung/ucie/mill-build/src",
+        "ref:v0:9705eeb9:/Users/lorenhung/ucie/out/mill-build/generatedScriptSources.dest/support"
+    ],
+    "valueHash": -1580037457,
+    "inputsHash": -512520530,
+    "millVersion": "1.1.2",
+    "millJvmVersion": "21.0.9",
+    "classLoaderSigHash": -1596153753
+}

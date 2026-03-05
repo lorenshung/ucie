@@ -1,0 +1,11 @@
+{
+    "value": [
+        "-deprecation",
+        "-Wconf:msg=will be encoded on the classpath:silent"
+    ],
+    "valueHash": -1091299807,
+    "inputsHash": 1702592304,
+    "millVersion": "1.1.2",
+    "millJvmVersion": "21.0.9",
+    "classLoaderSigHash": -1596153753
+}

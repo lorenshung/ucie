@@ -1,0 +1,10 @@
+{
+    "value": [
+        "org.chipsalliance:::chisel-plugin:6.7.0"
+    ],
+    "valueHash": 1542898936,
+    "inputsHash": 1506863131,
+    "millVersion": "1.1.2",
+    "millJvmVersion": "21.0.9",
+    "classLoaderSigHash": 27397662
+}

@@ -1,10 +1,10 @@
-package edu.berkeley.cs.ucie.digital.d2dadapter
+package edu.berkeley.cs.uciedigital.d2dadapter
 
 import chisel3._
 //import chisel3.util._
 //import chisel3.experimental._
 
-import interfaces._
+import edu.berkeley.cs.uciedigital.interfaces._
 
 class ParityGeneratorIO(fdiParams: FdiParams) extends Bundle{
     val snd_data = Input(Vec(fdiParams.width, UInt(8.W)))

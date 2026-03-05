@@ -1,0 +1,11 @@
+{
+    "value": [
+        "ref:v0:3a1d5b82:/Users/lorenhung/ucie/build.mill",
+        "ref:v0:c984eca8:/Users/lorenhung/ucie/mill-build/src"
+    ],
+    "valueHash": 1996400185,
+    "inputsHash": -1554453044,
+    "millVersion": "1.1.2",
+    "millJvmVersion": "21.0.9",
+    "classLoaderSigHash": -1596153753
+}

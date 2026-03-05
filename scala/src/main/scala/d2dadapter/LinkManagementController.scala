@@ -1,9 +1,9 @@
-package edu.berkeley.cs.ucie.digital.d2dadapter
+package edu.berkeley.cs.uciedigital.d2dadapter
 
 import chisel3._
 import chisel3.util._
-import interfaces._
-import sideband._
+import edu.berkeley.cs.uciedigital.interfaces._
+import edu.berkeley.cs.uciedigital.sideband._
 
 class LinkManagementControllerIO (val fdiParams: FdiParams,
                                   val rdiParams: RdiParams) extends Bundle {

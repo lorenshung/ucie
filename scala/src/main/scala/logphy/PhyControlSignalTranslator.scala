@@ -1,39 +1,11 @@
 package edu.berkeley.cs.uciedigital.logphy
 
+import edu.berkeley.cs.uciedigital.interfaces._
 import edu.berkeley.cs.uciedigital.utils._
 import chisel3._
 import circt.stage.ChiselStage
 import chisel3.util._
 
-// ================================================================================================
-// Classes and objects here for clarity, but are defined else where.
-// ** Won't compile at the moment due to refined. Will be removed **
-// ================================================================================================
-case class AfeParams(
-  sbSerializerRatio: Int = 1,
-  sbWidth: Int = 1,
-  mbSerializerRatio: Int = 32,
-  mbLanes: Int = 16,
-
-  clockPhaseSelBitWidth: Int = 5,
-  vRefSelBitWidth: Int = 5,
-
-  numLinkOps: Int = 16,
-
-  STANDALONE: Boolean = true
-)
-
-/** The speed of the physical layer of the link, in GT/s. */
-object SpeedMode extends ChiselEnum {
-  val speed4 = Value(0x0.U(4.W))
-  val speed8 = Value(0x1.U(4.W))
-  val speed12 = Value(0x2.U(4.W))
-  val speed16 = Value(0x3.U(4.W))
-  val speed24 = Value(0x4.U(4.W))
-  val speed32 = Value(0x5.U(4.W))
-  val speed48 = Value(0x6.U(4.W))
-  val speed64 = Value(0x7.U(4.W))
-}
 // ================================================================================================
 /*
   Description: 

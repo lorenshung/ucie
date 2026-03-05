@@ -1,0 +1,11 @@
+{
+    "value": [
+        "com.lihaoyi:::scalac-mill-moduledefs-plugin:0.13.1;exclude=com.lihaoyi:sourcecode_3",
+        "com.lihaoyi:::mill-runner-autooverride-plugin:1.1.2;exclude=com.lihaoyi:sourcecode_3"
+    ],
+    "valueHash": -1928177379,
+    "inputsHash": -363048795,
+    "millVersion": "1.1.2",
+    "millJvmVersion": "21.0.9",
+    "classLoaderSigHash": -1596153753
+}

@@ -18,6 +18,12 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+.metals
+.vscode
+
+scala/out/
+scala/project/
+scala/target/
 
 # Icon must end with two \r
 Icon

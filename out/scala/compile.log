@@ -1,0 +1,453 @@
+compiling 61 Scala sources to out/scala/compile.dest/classes ...
+[[31merror[39m] [31mscala/src/main/scala/d2dadapter/D2DSidebandModule.scala[0m:[31m39[0m:[31m40[0m
+    val fdi_sideband_node = Module(new SidebandNode(sbParams, fdiParams))
+                                       [31m^^^^^^^^^^^^[0m
+not found: type SidebandNode
+
+[[31merror[39m] [31mscala/src/main/scala/d2dadapter/D2DSidebandModule.scala[0m:[31m40[0m:[31m40[0m
+    val rdi_sideband_node = Module(new SidebandNode(sbParams, fdiParams))
+                                       [31m^^^^^^^^^^^^[0m
+not found: type SidebandNode
+
+[[31merror[39m] [31mscala/src/main/scala/d2dadapter/D2DSidebandModule.scala[0m:[31m42[0m:[31m38[0m
+    val sideband_switch = Module(new sidebandSwitcher(myID = 1, sbParams = sbParams))
+                                     [31m^^^^^^^^^^^^^^^^[0m
+not found: type sidebandSwitcher
+
+[[31merror[39m] [31mscala/src/main/scala/d2dadapter/D2DSidebandModule.scala[0m:[31m42[0m:[31m55[0m
+    val sideband_switch = Module(new sidebandSwitcher(myID = 1, sbParams = sbParams))
+                                                      [31m^^^^[0m
+not found: value myID
+
+[[31merror[39m] [31mscala/src/main/scala/d2dadapter/D2DSidebandModule.scala[0m:[31m42[0m:[31m74[0m
+    val sideband_switch = Module(new sidebandSwitcher(myID = 1, sbParams = sbParams))
+                                                                         [31m^^^^^^^^^^[0m
+reassignment to val
+
+[[31merror[39m] [31mscala/src/main/scala/interfaces/Afe.scala[0m:[31m63[0m:[31m16[0m
+    afeParams: AfeParams,
+               [31m^^^^^^^^^[0m
+not found: type AfeParams
+
+[[31merror[39m] [31mscala/src/main/scala/interfaces/Afe.scala[0m:[31m102[0m:[31m16[0m
+    afeParams: AfeParams,
+               [31m^^^^^^^^^[0m
+not found: type AfeParams
+
+[[31merror[39m] [31mscala/src/main/scala/logphy/PatternReader.scala[0m:[31m3[0m:[31m36[0m
+import edu.berkeley.cs.uciedigital.utils._
+                                   [31m^^^^^[0m
+object utils is not a member of package edu.berkeley.cs.uciedigital
+
+[[31merror[39m] [31mscala/src/main/scala/logphy/PatternWriter.scala[0m:[31m3[0m:[31m36[0m
+import edu.berkeley.cs.uciedigital.utils._
+                                   [31m^^^^^[0m
+object utils is not a member of package edu.berkeley.cs.uciedigital
+
+[[31merror[39m] [31mscala/src/main/scala/logphy/PatternReader.scala[0m:[31m89[0m:[31m52[0m
+  val clkRepairPatternReg = Seq.fill(3)(Module(new CircularShiftRegister(width=clkPatternWidth, 
+                                                   [31m^^^^^^^^^^^^^^^^^^^^^[0m
+not found: type CircularShiftRegister
+
+[[33mwarn[39m] [33mscala/src/main/scala/logphy/PatternReader.scala[0m:[33m3[0m:[33m42[0m
+import edu.berkeley.cs.uciedigital.utils._
+                                         [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/logphy/PatternWriter.scala[0m:[33m3[0m:[33m42[0m
+import edu.berkeley.cs.uciedigital.utils._
+                                         [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/logphy/PhyControlSignalTranslator.scala[0m:[33m4[0m:[33m42[0m
+import edu.berkeley.cs.uciedigital.utils._
+                                         [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/logphy/PhyControlSignalTranslator.scala[0m:[33m6[0m:[33m20[0m
+import circt.stage.ChiselStage
+                   [33m^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/logphy/PhyControlSignalTranslator.scala[0m:[33m7[0m:[33m21[0m
+import chisel3.util._
+                    [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/logphy/UcieLFSR.scala[0m:[33m3[0m:[33m42[0m
+import edu.berkeley.cs.uciedigital.utils._
+                                         [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/phy/AnalogBundles.scala[0m:[33m4[0m:[33m21[0m
+import chisel3.util._
+                    [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/phy/Phy.scala[0m:[33m5[0m:[33m38[0m
+import chisel3.experimental.dataview._
+                                     [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/phy/Phy.scala[0m:[33m6[0m:[33m35[0m
+import freechips.rocketchip.util.{AsyncQueue, AsyncQueueParams}
+                                  [33m^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/phy/Phy.scala[0m:[33m6[0m:[33m47[0m
+import freechips.rocketchip.util.{AsyncQueue, AsyncQueueParams}
+                                              [33m^^^^^^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/phy/Phy.scala[0m:[33m527[0m:[33m9[0m
+    val doutEnq = Mux(rxctlWire.sample_negedge, doutRegN, doutRegP)
+        [33m^^^^^^^[0m
+local val doutEnq in value $anonfun is never used
+
+[[33mwarn[39m] [33mscala/src/main/scala/phy/Rx.scala[0m:[33m5[0m:[33m29[0m
+import chisel3.experimental.noPrefix
+                            [33m^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/protocol/Common.scala[0m:[33m5[0m:[33m21[0m
+import chisel3.util._
+                    [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/protocol/Common.scala[0m:[33m6[0m:[33m44[0m
+import chisel3.experimental.BundleLiterals._
+                                           [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/protocol/Common.scala[0m:[33m7[0m:[33m19[0m
+import scala.math._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/protocol/Common.scala[0m:[33m9[0m:[33m17[0m
+import tilelink._
+                [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/protocol/ProtocolLayer.scala[0m:[33m5[0m:[33m21[0m
+import chisel3.util._
+                    [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/protocol/ProtocolLayer.scala[0m:[33m8[0m:[33m20[0m
+import javax.swing.InputMap
+                   [33m^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/sideband/SidebandClasses.scala[0m:[33m3[0m:[33m16[0m
+import chisel3._
+               [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/sideband/SidebandClasses.scala[0m:[33m4[0m:[33m21[0m
+import chisel3.util._
+                    [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/sideband/SidebandLinkSerdes.scala[0m:[33m18[0m:[33m35[0m
+import freechips.rocketchip.util.{AsyncQueue, AsyncQueueParams}
+                                  [33m^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/sideband/SidebandLinkSerdes.scala[0m:[33m18[0m:[33m47[0m
+import freechips.rocketchip.util.{AsyncQueue, AsyncQueueParams}
+                                              [33m^^^^^^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/main/scala/sideband/SidebandTypes.scala[0m:[33m4[0m:[33m21[0m
+import chisel3.util._
+                    [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DAdapterTest.scala[0m:[33m6[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DAdapterTest.scala[0m:[33m7[0m:[33m31[0m
+import org.scalatest.flatspec.AnyFlatSpec
+                              [33m^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DMainbandModuleTest.scala[0m:[33m5[0m:[33m16[0m
+import chisel3._
+               [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DMainbandModuleTest.scala[0m:[33m7[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DMainbandModuleTest.scala[0m:[33m8[0m:[33m31[0m
+import org.scalatest.flatspec.AnyFlatSpec
+                              [33m^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DMainbandModuleTest.scala[0m:[33m43[0m:[33m17[0m
+            val data = rand.nextLong(256)
+                [33m^^^^[0m
+local val data in value $anonfun is never used
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DMainbandModuleTest.scala[0m:[33m88[0m:[33m17[0m
+            val data = rand.nextLong(256)
+                [33m^^^^[0m
+local val data in value $anonfun is never used
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DMainbandModuleTest.scala[0m:[33m126[0m:[33m17[0m
+            val data = rand.nextLong(256)
+                [33m^^^^[0m
+local val data in value $anonfun is never used
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DMainbandModuleTest.scala[0m:[33m163[0m:[33m17[0m
+            val data1 = rand.nextLong(256)
+                [33m^^^^^[0m
+local val data1 in value $anonfun is never used
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DMainbandModuleTest.scala[0m:[33m174[0m:[33m17[0m
+            val data2 = rand.nextLong(256)
+                [33m^^^^^[0m
+local val data2 in value $anonfun is never used
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DSidebandModuleTest.scala[0m:[33m6[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/D2DSidebandModuleTest.scala[0m:[33m7[0m:[33m31[0m
+import org.scalatest.flatspec.AnyFlatSpec
+                              [33m^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkDisabledSubmoduleTest.scala[0m:[33m4[0m:[33m16[0m
+import chisel3._
+               [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkDisabledSubmoduleTest.scala[0m:[33m6[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkDisabledSubmoduleTest.scala[0m:[33m7[0m:[33m31[0m
+import org.scalatest.flatspec.AnyFlatSpec
+                              [33m^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkDisabledSubmoduleTest.scala[0m:[33m9[0m:[33m47[0m
+import edu.berkeley.cs.uciedigital.interfaces._
+                                              [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkInitSubmoduleTest.scala[0m:[33m4[0m:[33m16[0m
+import chisel3._
+               [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkInitSubmoduleTest.scala[0m:[33m6[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkInitSubmoduleTest.scala[0m:[33m7[0m:[33m31[0m
+import org.scalatest.flatspec.AnyFlatSpec
+                              [33m^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkInitSubmoduleTest.scala[0m:[33m8[0m:[33m47[0m
+import edu.berkeley.cs.uciedigital.interfaces._
+                                              [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkManagementControllerTest.scala[0m:[33m4[0m:[33m16[0m
+import chisel3._
+               [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkManagementControllerTest.scala[0m:[33m6[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkManagementControllerTest.scala[0m:[33m7[0m:[33m31[0m
+import org.scalatest.flatspec.AnyFlatSpec
+                              [33m^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkManagementControllerTest.scala[0m:[33m20[0m:[33m17[0m
+            val cycles_1us = 100
+                [33m^^^^^^^^^^[0m
+local val cycles_1us in value $anonfun is never used
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkResetSubmoduleTest.scala[0m:[33m4[0m:[33m16[0m
+import chisel3._
+               [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkResetSubmoduleTest.scala[0m:[33m6[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkResetSubmoduleTest.scala[0m:[33m7[0m:[33m31[0m
+import org.scalatest.flatspec.AnyFlatSpec
+                              [33m^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/LinkResetSubmoduleTest.scala[0m:[33m9[0m:[33m47[0m
+import edu.berkeley.cs.uciedigital.interfaces._
+                                              [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/ParityGenerator.scala[0m:[33m4[0m:[33m16[0m
+import chisel3._
+               [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/ParityGenerator.scala[0m:[33m6[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/ParityGenerator.scala[0m:[33m7[0m:[33m31[0m
+import org.scalatest.flatspec.AnyFlatSpec
+                              [33m^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/ParityNegotiationSubmoduleTest.scala[0m:[33m4[0m:[33m16[0m
+import chisel3._
+               [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/ParityNegotiationSubmoduleTest.scala[0m:[33m6[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/ParityNegotiationSubmoduleTest.scala[0m:[33m7[0m:[33m31[0m
+import org.scalatest.flatspec.AnyFlatSpec
+                              [33m^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/StallHandlerTest.scala[0m:[33m4[0m:[33m16[0m
+import chisel3._
+               [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/StallHandlerTest.scala[0m:[33m6[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/d2dadapter/StallHandlerTest.scala[0m:[33m7[0m:[33m31[0m
+import org.scalatest.flatspec.AnyFlatSpec
+                              [33m^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/LinkTrainingSMTest.scala[0m:[33m3[0m:[33m45[0m
+import edu.berkeley.cs.uciedigital.sideband._
+                                            [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/LinkTrainingSMTest.scala[0m:[33m4[0m:[33m47[0m
+import edu.berkeley.cs.uciedigital.interfaces._
+                                              [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/LinkTrainingSMTest.scala[0m:[33m6[0m:[33m16[0m
+import chisel3._
+               [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/LinkTrainingSMTest.scala[0m:[33m7[0m:[33m21[0m
+import chisel3.util._
+                    [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/LinkTrainingSMTest.scala[0m:[33m11[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/LinkTrainingSMTest.scala[0m:[33m12[0m:[33m24[0m
+import firrtl2.options.TargetDirAnnotation
+                       [33m^^^^^^^^^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/LinkTrainingSMTest.scala[0m:[33m21[0m:[33m30[0m
+import org.scalatest.funspec.AnyFunSpec
+                             [33m^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/ParallelGaloisLFSRTest.scala[0m:[33m4[0m:[33m21[0m
+import chisel3.util._
+                    [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/ParallelGaloisLFSRTest.scala[0m:[33m8[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/ParallelGaloisLFSRTest.scala[0m:[33m9[0m:[33m24[0m
+import firrtl2.options.TargetDirAnnotation
+                       [33m^^^^^^^^^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/ParallelGaloisLFSRTest.scala[0m:[33m18[0m:[33m30[0m
+import org.scalatest.funspec.AnyFunSpec
+                             [33m^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/SBInitSMTest.scala[0m:[33m4[0m:[33m47[0m
+import edu.berkeley.cs.uciedigital.interfaces._
+                                              [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/SBInitSMTest.scala[0m:[33m11[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/SBInitSMTest.scala[0m:[33m12[0m:[33m24[0m
+import firrtl2.options.TargetDirAnnotation
+                       [33m^^^^^^^^^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/logphy/SBInitSMTest.scala[0m:[33m21[0m:[33m30[0m
+import org.scalatest.funspec.AnyFunSpec
+                             [33m^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/sideband/SidebandLinkSerdesTest.scala[0m:[33m8[0m:[33m19[0m
+import chiseltest._
+                  [33m^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/sideband/SidebandLinkSerdesTest.scala[0m:[33m9[0m:[33m24[0m
+import firrtl2.options.TargetDirAnnotation
+                       [33m^^^^^^^^^^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/sideband/SidebandLinkSerdesTest.scala[0m:[33m18[0m:[33m30[0m
+import org.scalatest.funspec.AnyFunSpec
+                             [33m^^^^^^^^^^[0m
+Unused import
+
+[[33mwarn[39m] [33mscala/src/test/scala/sideband/SidebandLinkSerdesTest.scala[0m:[33m382[0m:[33m15[0m
+          var bitstring = ""
+              [33m^^^^^^^^^[0m
+local var bitstring in value $anonfun is never updated: consider using immutable val
+
+[[33mwarn[39m] [33mscala/src/test/scala/sideband/SidebandLinkSerdesTest.scala[0m:[33m904[0m:[33m9[0m
+    val timeoutCycles = 1000
+        [33m^^^^^^^^^^^^^[0m
+local val timeoutCycles in value <local SidebandLinkSerdesTest> is never used
+
+[[33mwarn[39m] 80 warnings found
+[[31merror[39m] 100 errors found

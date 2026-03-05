@@ -1,0 +1,1013 @@
+2026-03-04T23:11:25Z launchOrConnectToServer: mill.client.lock.Locks@7494f646
+2026-03-04T23:11:25Z Acquiring the launcher lock: PidLock{@3d66cc01, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-04T23:11:25Z launchOrConnectToServer attempt
+2026-03-04T23:11:25Z Checking if the daemon lock is available: PidLock{@4192744e, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-04T23:11:25Z The daemon lock is available, starting the server.
+2026-03-04T23:11:25Z The server has started: OsProcess(51658)
+2026-03-04T23:11:25Z Waiting for the server to take the daemon lock: PidLock{@4192744e, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-04T23:11:28Z The server OsProcess(51658) has taken the daemon lock: PidLock{@4192744e, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-04T23:11:28Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-04T23:11:28Z launchOrConnectToServer attempt
+2026-03-04T23:11:28Z Checking if the daemon lock is available: PidLock{@4192744e, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID exception
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID: 51658
+2026-03-04T23:11:28Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-04T23:11:28Z launchOrConnectToServer attempt
+2026-03-04T23:11:28Z Checking if the daemon lock is available: PidLock{@4192744e, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-04T23:11:28Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:28Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:28Z Read PID: 51658
+2026-03-04T23:11:28Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-04T23:11:28Z Read server port
+2026-03-04T23:11:28Z Connecting: 54806
+2026-03-04T23:11:28Z runWithConnection (RPC): Launched(54806,Some(Socket[addr=localhost/127.0.0.1,port=54806,localport=54807]),OsProcess(51658))
+2026-03-04T23:11:28Z runWithConnection exit code: 0
+2026-03-04T23:11:34Z launchOrConnectToServer: mill.client.lock.Locks@379dbf0
+2026-03-04T23:11:34Z Acquiring the launcher lock: PidLock{@73c92f2b, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-04T23:11:34Z launchOrConnectToServer attempt
+2026-03-04T23:11:34Z Checking if the daemon lock is available: PidLock{@6c89138e, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-04T23:11:34Z The daemon lock is not available, there is already a server running.
+2026-03-04T23:11:34Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-04T23:11:34Z Read PID: 51658
+2026-03-04T23:11:34Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-04T23:11:34Z Read server port
+2026-03-04T23:11:34Z Connecting: 54806
+2026-03-04T23:11:34Z runWithConnection (RPC): Launched(54806,Some(Socket[addr=localhost/127.0.0.1,port=54806,localport=54808]),OsProcess(51658))
+2026-03-04T23:11:34Z runWithConnection exit code: 0
+2026-03-05T00:01:00Z launchOrConnectToServer: mill.client.lock.Locks@4528f180
+2026-03-05T00:01:00Z Acquiring the launcher lock: PidLock{@13684b09, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:01:00Z launchOrConnectToServer attempt
+2026-03-05T00:01:00Z Checking if the daemon lock is available: PidLock{@30b39772, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:01:00Z The daemon lock is available, starting the server.
+2026-03-05T00:01:00Z The server has started: OsProcess(56045)
+2026-03-05T00:01:00Z Waiting for the server to take the daemon lock: PidLock{@30b39772, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:01:00Z The server OsProcess(56045) has taken the daemon lock: PidLock{@30b39772, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:01:00Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:01:00Z launchOrConnectToServer attempt
+2026-03-05T00:01:00Z Checking if the daemon lock is available: PidLock{@30b39772, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 51658
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID exception
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 56045
+2026-03-05T00:01:00Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:01:00Z launchOrConnectToServer attempt
+2026-03-05T00:01:00Z Checking if the daemon lock is available: PidLock{@30b39772, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:01:00Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:00Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:00Z Read PID: 56045
+2026-03-05T00:01:00Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:01:00Z Read server port
+2026-03-05T00:01:00Z Connecting: 56821
+2026-03-05T00:01:00Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=56822]),OsProcess(56045))
+2026-03-05T00:01:03Z runWithConnection exit code: 1
+2026-03-05T00:01:34Z launchOrConnectToServer: mill.client.lock.Locks@2ae33a99
+2026-03-05T00:01:34Z Acquiring the launcher lock: PidLock{@3f9df899, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:01:34Z launchOrConnectToServer attempt
+2026-03-05T00:01:34Z Checking if the daemon lock is available: PidLock{@7b38ee08, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:01:34Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:01:34Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:01:34Z Read PID: 56045
+2026-03-05T00:01:34Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:01:34Z Read server port
+2026-03-05T00:01:34Z Connecting: 56821
+2026-03-05T00:01:34Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=56840]),OsProcess(56045))
+2026-03-05T00:01:35Z runWithConnection exit code: 1
+2026-03-05T00:02:03Z launchOrConnectToServer: mill.client.lock.Locks@793fc6d4
+2026-03-05T00:02:03Z Acquiring the launcher lock: PidLock{@565937e1, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:02:03Z launchOrConnectToServer attempt
+2026-03-05T00:02:03Z Checking if the daemon lock is available: PidLock{@418f1f1, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:02:03Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:02:03Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:02:03Z Read PID: 56045
+2026-03-05T00:02:03Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:02:03Z Read server port
+2026-03-05T00:02:03Z Connecting: 56821
+2026-03-05T00:02:03Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=56859]),OsProcess(56045))
+2026-03-05T00:02:04Z runWithConnection exit code: 1
+2026-03-05T00:02:35Z launchOrConnectToServer: mill.client.lock.Locks@136ddc14
+2026-03-05T00:02:35Z Acquiring the launcher lock: PidLock{@b41b12e, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:02:35Z launchOrConnectToServer attempt
+2026-03-05T00:02:35Z Checking if the daemon lock is available: PidLock{@3ad6585, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:02:35Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:02:35Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:02:35Z Read PID: 56045
+2026-03-05T00:02:35Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:02:35Z Read server port
+2026-03-05T00:02:35Z Connecting: 56821
+2026-03-05T00:02:35Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=56871]),OsProcess(56045))
+2026-03-05T00:02:38Z runWithConnection exit code: 1
+2026-03-05T00:02:43Z launchOrConnectToServer: mill.client.lock.Locks@18fbcf90
+2026-03-05T00:02:43Z Acquiring the launcher lock: PidLock{@6b23f089, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:02:43Z launchOrConnectToServer attempt
+2026-03-05T00:02:43Z Checking if the daemon lock is available: PidLock{@32bfd073, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:02:43Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:02:43Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:02:43Z Read PID: 56045
+2026-03-05T00:02:43Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:02:43Z Read server port
+2026-03-05T00:02:43Z Connecting: 56821
+2026-03-05T00:02:43Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=56872]),OsProcess(56045))
+2026-03-05T00:02:43Z runWithConnection exit code: 0
+2026-03-05T00:02:53Z launchOrConnectToServer: mill.client.lock.Locks@160d7c49
+2026-03-05T00:02:53Z Acquiring the launcher lock: PidLock{@73a3997, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:02:53Z launchOrConnectToServer attempt
+2026-03-05T00:02:53Z Checking if the daemon lock is available: PidLock{@4103982, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:02:53Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:02:53Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:02:53Z Read PID: 56045
+2026-03-05T00:02:53Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:02:53Z Read server port
+2026-03-05T00:02:53Z Connecting: 56821
+2026-03-05T00:02:53Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=56881]),OsProcess(56045))
+2026-03-05T00:02:54Z runWithConnection exit code: 1
+2026-03-05T00:02:58Z launchOrConnectToServer: mill.client.lock.Locks@35f0b057
+2026-03-05T00:02:58Z Acquiring the launcher lock: PidLock{@2933a6d9, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:02:58Z launchOrConnectToServer attempt
+2026-03-05T00:02:58Z Checking if the daemon lock is available: PidLock{@2071336b, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:02:58Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:02:58Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:02:58Z Read PID: 56045
+2026-03-05T00:02:58Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:02:58Z Read server port
+2026-03-05T00:02:58Z Connecting: 56821
+2026-03-05T00:02:58Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=56883]),OsProcess(56045))
+2026-03-05T00:02:58Z runWithConnection exit code: 0
+2026-03-05T00:03:09Z launchOrConnectToServer: mill.client.lock.Locks@7400329d
+2026-03-05T00:03:09Z Acquiring the launcher lock: PidLock{@2fca10e4, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:03:09Z launchOrConnectToServer attempt
+2026-03-05T00:03:09Z Checking if the daemon lock is available: PidLock{@466992ab, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:03:09Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:03:09Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:03:09Z Read PID: 56045
+2026-03-05T00:03:09Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:03:09Z Read server port
+2026-03-05T00:03:09Z Connecting: 56821
+2026-03-05T00:03:09Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=56885]),OsProcess(56045))
+2026-03-05T00:03:11Z runWithConnection exit code: 1
+2026-03-05T00:05:16Z launchOrConnectToServer: mill.client.lock.Locks@2025cc04
+2026-03-05T00:05:16Z Acquiring the launcher lock: PidLock{@3ce0a087, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:05:16Z launchOrConnectToServer attempt
+2026-03-05T00:05:16Z Checking if the daemon lock is available: PidLock{@2fab8b8e, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:05:16Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:05:16Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:05:16Z Read PID: 56045
+2026-03-05T00:05:16Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:05:16Z Read server port
+2026-03-05T00:05:16Z Connecting: 56821
+2026-03-05T00:05:16Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=56931]),OsProcess(56045))
+2026-03-05T00:05:20Z runWithConnection exit code: 1
+2026-03-05T00:06:27Z launchOrConnectToServer: mill.client.lock.Locks@5bbb014
+2026-03-05T00:06:27Z Acquiring the launcher lock: PidLock{@7cda1298, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:06:27Z launchOrConnectToServer attempt
+2026-03-05T00:06:27Z Checking if the daemon lock is available: PidLock{@3c73536, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:06:27Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:06:27Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:06:27Z Read PID: 56045
+2026-03-05T00:06:27Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:06:27Z Read server port
+2026-03-05T00:06:27Z Connecting: 56821
+2026-03-05T00:06:27Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=56979]),OsProcess(56045))
+2026-03-05T00:06:29Z runWithConnection exit code: 1
+2026-03-05T00:10:11Z launchOrConnectToServer: mill.client.lock.Locks@3e803135
+2026-03-05T00:10:11Z Acquiring the launcher lock: PidLock{@31564f14, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:10:11Z launchOrConnectToServer attempt
+2026-03-05T00:10:11Z Checking if the daemon lock is available: PidLock{@5df19857, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:10:11Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:10:11Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:10:11Z Read PID: 56045
+2026-03-05T00:10:11Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:10:11Z Read server port
+2026-03-05T00:10:11Z Connecting: 56821
+2026-03-05T00:10:11Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=57092]),OsProcess(56045))
+2026-03-05T00:10:13Z runWithConnection exit code: 1
+2026-03-05T00:12:19Z launchOrConnectToServer: mill.client.lock.Locks@36255f33
+2026-03-05T00:12:19Z Acquiring the launcher lock: PidLock{@3f19c778, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:12:19Z launchOrConnectToServer attempt
+2026-03-05T00:12:19Z Checking if the daemon lock is available: PidLock{@3327f44a, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:12:19Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:12:19Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:12:19Z Read PID: 56045
+2026-03-05T00:12:19Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:12:19Z Read server port
+2026-03-05T00:12:19Z Connecting: 56821
+2026-03-05T00:12:19Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=57169]),OsProcess(56045))
+2026-03-05T00:12:21Z runWithConnection exit code: 1
+2026-03-05T00:14:11Z launchOrConnectToServer: mill.client.lock.Locks@722ce6b8
+2026-03-05T00:14:11Z Acquiring the launcher lock: PidLock{@6658888f, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:14:11Z launchOrConnectToServer attempt
+2026-03-05T00:14:11Z Checking if the daemon lock is available: PidLock{@4377850d, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:14:11Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:14:11Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:14:11Z Read PID: 56045
+2026-03-05T00:14:11Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:14:11Z Read server port
+2026-03-05T00:14:11Z Connecting: 56821
+2026-03-05T00:14:11Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=57203]),OsProcess(56045))
+2026-03-05T00:14:11Z runWithConnection exit code: 1
+2026-03-05T00:15:18Z launchOrConnectToServer: mill.client.lock.Locks@5118738a
+2026-03-05T00:15:18Z Acquiring the launcher lock: PidLock{@1089022d, path='/Users/lorenhung/ucie/out/mill-daemon/launcherLock'}
+2026-03-05T00:15:18Z launchOrConnectToServer attempt
+2026-03-05T00:15:18Z Checking if the daemon lock is available: PidLock{@2f2bb0e7, path='/Users/lorenhung/ucie/out/mill-daemon/daemonLock'}
+2026-03-05T00:15:18Z The daemon lock is not available, there is already a server running.
+2026-03-05T00:15:18Z Trying to read the process ID of a running daemon from /Users/lorenhung/ucie/out/mill-daemon/processId
+2026-03-05T00:15:18Z Read PID: 56045
+2026-03-05T00:15:18Z Reading server port: /Users/lorenhung/ucie/out/mill-daemon
+2026-03-05T00:15:18Z Read server port
+2026-03-05T00:15:18Z Connecting: 56821
+2026-03-05T00:15:18Z runWithConnection (RPC): Launched(56821,Some(Socket[addr=localhost/127.0.0.1,port=56821,localport=57246]),OsProcess(56045))
+2026-03-05T00:15:19Z runWithConnection exit code: 1

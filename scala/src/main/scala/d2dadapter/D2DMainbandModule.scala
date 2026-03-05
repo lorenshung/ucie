@@ -1,11 +1,11 @@
-package edu.berkeley.cs.ucie.digital.d2dadapter
+package edu.berkeley.cs.uciedigital.d2dadapter
 
 import chisel3._
 //import chisel3.util._
 //import chisel3.experimental._
 
-import interfaces._
-import sideband._
+import edu.berkeley.cs.uciedigital.interfaces._
+import edu.berkeley.cs.uciedigital.sideband._
 
 class D2DMainbandModuleIO(val fdiParams: FdiParams, val rdiParams: RdiParams, val sbParams: SidebandParams) extends Bundle{
     //protocol to d2d

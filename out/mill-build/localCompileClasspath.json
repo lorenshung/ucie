@@ -1,0 +1,10 @@
+{
+    "value": [
+        "ref:v0:c984eca8:/Users/lorenhung/ucie/mill-build/compile-resources"
+    ],
+    "valueHash": 425737632,
+    "inputsHash": -1591009633,
+    "millVersion": "1.1.2",
+    "millJvmVersion": "21.0.9",
+    "classLoaderSigHash": -1596153753
+}
