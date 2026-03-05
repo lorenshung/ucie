@@ -21,7 +21,8 @@
 .metals
 .vscode
 
-scala/out/
+# Mill / build output
+out/
 scala/project/
 scala/target/
 
