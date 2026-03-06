@@ -8,18 +8,6 @@ import circt.stage.ChiselStage
 import edu.berkeley.cs.uciedigital.interfaces._
 import edu.berkeley.cs.uciedigital.sideband._
 
-object Elaborate extends App {
-  ChiselStage.emitSystemVerilogFile(
-    new D2DAdapter(new FdiParams(width = 8, dllpWidth = 8, sbWidth = 32), new RdiParams(width = 8, sbWidth = 32), new SidebandParams()),
-    args = Array("-td", "./generated-src/d2dadapter"),
-    firtoolOpts = Array(
-      "-O=debug",
-      "-g",
-      "--disable-all-randomization",
-      "--strip-debug-info",
-      "--lowering-options=disallowLocalVariables"))
-}
-
 class D2DAdapterIO (val fdiParams: FdiParams, val rdiParams: RdiParams) extends Bundle {
     val fdi = Flipped(new Fdi(fdiParams))
     val rdi = new Rdi(rdiParams)
