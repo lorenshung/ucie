@@ -14,6 +14,18 @@ object SpeedMode extends ChiselEnum {
   val speed64 = Value(0x7.U(3.W))
 }
 
+/** EVERYTHING BELOW THIS POINT IS OLD IMPL FOR INITIAL COMPILATION PURPOSES. 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * EVERYTHING BELOW THIS POINT IS OLD IMPL FOR INITIAL COMPILATION PURPOSES. 
+*/
+
 /** The state of the logical PHY. */
 object PhyState extends ChiselEnum {
   val reset = Value(0x0.U(4.W))

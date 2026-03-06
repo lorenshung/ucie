@@ -4,6 +4,19 @@ package interfaces
 import chisel3._
 import chisel3.util._
 
+
+/** EVERYTHING IN THIS FILE IS OLD IMPL FOR INITIAL COMPILATION PURPOSES. 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * EVERYTHING IN THIS FILE IS OLD IMPL FOR INITIAL COMPILATION PURPOSES. 
+*/
+
 case class RdiParams(width: Int = 64, sbWidth: Int = 32)
 
 /** The raw D2D interface (RDI), from the perspective of the D2D Adapter. */

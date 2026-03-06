@@ -4,6 +4,24 @@ package interfaces
 import chisel3._
 import chisel3.util._
 
+
+
+
+/** EVERYTHING IN THIS FILE IS OLD IMPL FOR INITIAL COMPILATION PURPOSES. 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * EVERYTHING IN THIS FILE IS OLD IMPL FOR INITIAL COMPILATION PURPOSES. 
+*/
+
+
+
+
 class FifoParams extends Bundle {
   val clk = Clock()
   val reset = Bool()

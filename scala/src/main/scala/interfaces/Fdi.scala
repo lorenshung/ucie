@@ -4,6 +4,17 @@ package interfaces
 import chisel3._
 import chisel3.util._
 
+/** EVERYTHING IN THIS FILE IS OLD IMPL FOR INITIAL COMPILATION PURPOSES. 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * EVERYTHING IN THIS FILE IS OLD IMPL FOR INITIAL COMPILATION PURPOSES. 
+*/
 case class FdiParams(width: Int = 64, dllpWidth: Int = 128, sbWidth: Int = 128)
 
 /** The flit-aware die-to-die interface (FDI), from the perspective of the

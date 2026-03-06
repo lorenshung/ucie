@@ -3,6 +3,20 @@ package interfaces
 
 import chisel3._
 
+
+/** EVERYTHING IN THIS FILE IS OLD IMPL FOR INITIAL COMPILATION PURPOSES. 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * EVERYTHING IN THIS FILE IS OLD IMPL FOR INITIAL COMPILATION PURPOSES. 
+*/
+
+
 /** An I/O Bundle containing `valid`, `ready`, and `irdy` signals that handshake
   * the transfer of data stored in the 'bits' subfield.
   *

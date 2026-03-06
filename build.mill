@@ -1,5 +1,5 @@
-import mill.*
-import mill.scalalib.*
+import mill._
+import mill.scalalib._
 // import millbuild.*
 
 object Deps {
@@ -29,5 +29,27 @@ object scala extends ScalaModule {
   )
 
   def scalacPluginMvnDeps = Seq(Deps.chiselPlugin)
+
+  object test extends ScalaTests with TestModule.ScalaTest {
+    def mvnDeps = super.mvnDeps() ++ Seq(Deps.chiseltest, Deps.scalatest)
+  }
+
+}
+
+/** Standalone module: only the D2D software reference model and its tests.
+  * No Chisel, no RTL. Use this while the rest of the repo is broken.
+  * Run: ./mill d2dmodel.test
+  * Layout: d2dmodel/src/ (main), d2dmodel/test/src/ (tests).
+  */
+object d2dmodel extends ScalaModule {
+
+  def millSourcePath = os.pwd / "d2dmodel"
+  def scalaVersion = "2.13.16"
+  def mvnDeps = Seq()
+  def scalacOptions = Seq("-deprecation", "-feature", "-Xlint")
+
+  object test extends ScalaTests with TestModule.ScalaTest {
+    def mvnDeps = super.mvnDeps() ++ Seq(Deps.scalatest)
+  }
 
 }
