@@ -1,48 +1,31 @@
 import mill._
 import mill.scalalib._
-// import millbuild.*
 
 object Deps {
-  val chisel = mvn"org.chipsalliance::chisel:6.7.0"
-  val chiselPlugin = mvn"org.chipsalliance:::chisel-plugin:6.7.0"
-  val chiseltest = mvn"edu.berkeley.cs::chiseltest:6.0.0"
-  val scalatest = mvn"org.scalatest::scalatest:3.2.18"
+  val scalaVersion = "2.13.14"
+  val chisel       = mvn"org.chipsalliance::chisel:7.3.0"
+  val chiselPlugin = mvn"org.chipsalliance:::chisel-plugin:7.3.0"
+}
+
+trait CommonModule extends ScalaModule {
+  override def scalaVersion = Deps.scalaVersion
+  override def scalacOptions = Seq("-Ymacro-annotations")
+}
+
+trait HasChisel extends ScalaModule {
+  override def mvnDeps = super.mvnDeps() ++ Seq(Deps.chisel)
+  override def scalacPluginMvnDeps = Seq(Deps.chiselPlugin)
+}
+
+/**
+ * Root module so you can run `./mill compile` and `./mill test`.
+ *
+ * Uses sbt-style layout under the repo root:
+ * - src/main/scala
+ * - src/test/scala
+ */
+object `package` extends SbtModule with CommonModule with HasChisel {
+  object test extends SbtTests with TestModule.ScalaTest
 }
 
 
-object scala extends ScalaModule {
-
-  def mvnDeps = Seq(Deps.chisel)
-
-  def millSourcePath = os.pwd
-
-  def scalaVersion = "2.13.16"
-
-  def scalacOptions = Seq(
-    "-deprecation",
-    "-feature",
-    "-language:reflectiveCalls",
-    "-Xcheckinit",
-    "-Xlint"
-  )
-
-  def scalacPluginMvnDeps = Seq(Deps.chiselPlugin)
-
-  object test extends ScalaTests with TestModule.ScalaTest {
-    def mvnDeps = super.mvnDeps() ++ Seq(Deps.chiseltest, Deps.scalatest)
-  }
-
-}
-
-object d2dmodel extends ScalaModule {
-
-  def millSourcePath = os.pwd / "d2dmodel"
-  def scalaVersion = "2.13.16"
-  def mvnDeps = Seq()
-  def scalacOptions = Seq("-deprecation", "-feature", "-Xlint")
-
-  object test extends ScalaTests with TestModule.ScalaTest {
-    def mvnDeps = super.mvnDeps() ++ Seq(Deps.scalatest)
-  }
-
-}
