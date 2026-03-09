@@ -2,9 +2,10 @@ import mill._
 import mill.scalalib._
 
 object Deps {
-  val scalaVersion = "2.13.14"
-  val chisel       = mvn"org.chipsalliance::chisel:7.3.0"
-  val chiselPlugin = mvn"org.chipsalliance:::chisel-plugin:7.3.0"
+  val scalaVersion = "2.13.16"
+  val chisel       = mvn"org.chipsalliance::chisel:6.7.0"
+  val chiselPlugin = mvn"org.chipsalliance:::chisel-plugin:6.7.0"
+  val chiseltest   = mvn"edu.berkeley.cs::chiseltest:6.0.0"
 }
 
 trait CommonModule extends ScalaModule {
@@ -25,7 +26,10 @@ trait HasChisel extends ScalaModule {
  * - src/test/scala
  */
 object `package` extends SbtModule with CommonModule with HasChisel {
-  object test extends SbtTests with TestModule.ScalaTest
+  object test extends SbtTests with TestModule.ScalaTest {
+    override def mvnDeps = super.mvnDeps() ++ Seq(Deps.chiseltest)
+    def testParallelism = false
+  }
 }
 
 
