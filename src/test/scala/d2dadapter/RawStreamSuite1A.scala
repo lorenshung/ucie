@@ -78,11 +78,11 @@ class RawStreamSuite1A extends AnyFlatSpec with ChiselScalatestTester {
           assert(
             currData == beat.data,
             s"Cycle $cycle: driven fdi_lp_data (0x${currData.toString(16)}) != pending beat data (0x${beat.data.toString(16)})"
-          )
+          ) // SPEC-DERIVED
           assert(
             currStream == beat.streamId,
             s"Cycle $cycle: driven fdi_lp_stream (0x${currStream.toHexString}) != pending beat stream (0x${beat.streamId.toHexString})"
-          )
+          ) // SPEC-DERIVED
 
           // If the same beat remains outstanding across cycles, source fields must stay stable.
           prevOutstanding match {
@@ -90,11 +90,11 @@ class RawStreamSuite1A extends AnyFlatSpec with ChiselScalatestTester {
               assert(
                 currData == prevData,
                 s"Cycle $cycle: source data changed while beat idx=$idx remained unaccepted (0x${prevData.toString(16)} -> 0x${currData.toString(16)})"
-              )
+              ) // SPEC-DERIVED
               assert(
                 currStream == prevStream,
                 s"Cycle $cycle: source stream changed while beat idx=$idx remained unaccepted (0x${prevStream.toHexString} -> 0x${currStream.toHexString})"
-              )
+              ) // SPEC-DERIVED
             case _ => // New pending beat (or first cycle for this beat), nothing to compare yet.
           }
           prevOutstanding = Some((idx, currData, currStream))
@@ -112,8 +112,8 @@ class RawStreamSuite1A extends AnyFlatSpec with ChiselScalatestTester {
       if (injectedSourceHoldoffFn(cycleRef)) {
         // This is an injected testbench holdoff, not DUT-reported stallack.
         // It verifies the driver can gate fdi_lp_valid/fdi_lp_irdy under a hold condition.
-        dut.io.fdi_lp_valid.expect(false.B)
-        dut.io.fdi_lp_irdy.expect(false.B)
+        dut.io.fdi_lp_valid.expect(false.B) // RTL-DERIVED
+        dut.io.fdi_lp_irdy.expect(false.B) // RTL-DERIVED
       }
 
       // Edge-timing convention:
@@ -131,7 +131,7 @@ class RawStreamSuite1A extends AnyFlatSpec with ChiselScalatestTester {
       cycleRef += 1
     }
 
-    assert(cycleRef < maxCycles, s"Timeout at $maxCycles cycles (driverDone=${driver.isDone}, expectedQ=${expectedQ.size})")
+    assert(cycleRef < maxCycles, s"Timeout at $maxCycles cycles (driverDone=${driver.isDone}, expectedQ=${expectedQ.size})") // UNKNOWN: needs spec/RTL audit
 
     // Small drain window for any in-flight beat.
     var drain = 0
@@ -141,8 +141,8 @@ class RawStreamSuite1A extends AnyFlatSpec with ChiselScalatestTester {
       checkSourceStability(cycleRef)
 
       if (injectedSourceHoldoffFn(cycleRef)) {
-        dut.io.fdi_lp_valid.expect(false.B)
-        dut.io.fdi_lp_irdy.expect(false.B)
+        dut.io.fdi_lp_valid.expect(false.B) // RTL-DERIVED
+        dut.io.fdi_lp_irdy.expect(false.B) // RTL-DERIVED
       }
 
       val ingressObs = ingressTracker.observeForNextEdge(cycleRef)
@@ -156,7 +156,7 @@ class RawStreamSuite1A extends AnyFlatSpec with ChiselScalatestTester {
       drain += 1
     }
 
-    scoreboard.finishAndAssert(acceptedInputCount = ingressTracker.acceptedCount)
+    scoreboard.finishAndAssert(acceptedInputCount = ingressTracker.acceptedCount) // SPEC-DERIVED
   }
 
   behavior of "RawStreamSuite1A"

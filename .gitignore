@@ -84,3 +84,8 @@ xrun.history
 xrun.log
 
 ucie-old/
+
+coverage.md
+RAW_STREAMING_SPEC_COVERAGE_MATRIX.md
+testing
+testing/

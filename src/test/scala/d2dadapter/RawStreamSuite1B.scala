@@ -82,22 +82,22 @@ class RawStreamSuite1B extends AnyFlatSpec with ChiselScalatestTester {
           assert(
             currData == beat.data,
             s"Cycle $cycle idx=$idx: source data mismatch, driven=0x${currData.toString(16)} pending=0x${beat.data.toString(16)}"
-          )
+          ) // SPEC-DERIVED
           assert(
             currStream == beat.streamId,
             s"Cycle $cycle idx=$idx: source stream mismatch, driven=0x${currStream.toHexString} pending=0x${beat.streamId.toHexString}"
-          )
+          ) // SPEC-DERIVED
 
           prevOutstanding match {
             case Some((prevIdx, prevData, prevStream)) if prevIdx == idx =>
               assert(
                 currData == prevData,
                 s"Cycle $cycle idx=$idx: source data changed while beat remained unaccepted (prev=0x${prevData.toString(16)} now=0x${currData.toString(16)})"
-              )
+              ) // SPEC-DERIVED
               assert(
                 currStream == prevStream,
                 s"Cycle $cycle idx=$idx: source stream changed while beat remained unaccepted (prev=0x${prevStream.toHexString} now=0x${currStream.toHexString})"
-              )
+              ) // SPEC-DERIVED
             case _ =>
           }
           prevOutstanding = Some((idx, currData, currStream))
@@ -113,8 +113,8 @@ class RawStreamSuite1B extends AnyFlatSpec with ChiselScalatestTester {
 
       if (injectedSourceHoldoffFn(cycleRef)) {
         // Injected source holdoff check (testbench behavior), not DUT stallack semantics.
-        dut.io.fdi_lp_valid.expect(false.B)
-        dut.io.fdi_lp_irdy.expect(false.B)
+        dut.io.fdi_lp_valid.expect(false.B) // RTL-DERIVED
+        dut.io.fdi_lp_irdy.expect(false.B) // RTL-DERIVED
       }
 
       // Edge contract:
@@ -133,7 +133,7 @@ class RawStreamSuite1B extends AnyFlatSpec with ChiselScalatestTester {
       cycleRef += 1
     }
 
-    assert(cycleRef < maxCycles, s"Timeout at $maxCycles cycles")
+    assert(cycleRef < maxCycles, s"Timeout at $maxCycles cycles") // UNKNOWN: needs spec/RTL audit
 
     var drain = 0
     while (drain < 16 && expectedQ.nonEmpty) {
@@ -142,8 +142,8 @@ class RawStreamSuite1B extends AnyFlatSpec with ChiselScalatestTester {
       checkSourceStability(cycleRef)
 
       if (injectedSourceHoldoffFn(cycleRef)) {
-        dut.io.fdi_lp_valid.expect(false.B)
-        dut.io.fdi_lp_irdy.expect(false.B)
+        dut.io.fdi_lp_valid.expect(false.B) // RTL-DERIVED
+        dut.io.fdi_lp_irdy.expect(false.B) // RTL-DERIVED
       }
 
       val ingressObs = ingressTracker.observeForNextEdge(cycleRef)
@@ -161,7 +161,7 @@ class RawStreamSuite1B extends AnyFlatSpec with ChiselScalatestTester {
     scoreboard.finishAndAssert(
       acceptedInputCount = ingressTracker.acceptedCount,
       maxExpectedQueueDepth = Some(maxExpectedQueueDepth)
-    )
+    ) // SPEC-DERIVED
   }
 
   behavior of "RawStreamSuite1B"

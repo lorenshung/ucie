@@ -59,7 +59,7 @@ class LinkManagementFsmSuite extends AnyFlatSpec with ChiselScalatestTester {
       s"Timeout waiting for: $reason after $maxCycles cycles. " +
         s"state=${dut.io.fdi_pl_state_sts.peek().litValue} " +
         s"sb_snd=0x${dut.io.sb_snd.peek().litValue.toString(16)}"
-    )
+    ) // UNKNOWN: needs spec/RTL audit
   }
 
   private def pulseSbReady(dut: LinkManagementController): Unit = {
@@ -138,12 +138,13 @@ class LinkManagementFsmSuite extends AnyFlatSpec with ChiselScalatestTester {
     test(new LinkManagementController(fdiParams, rdiParams, sbParams)) { dut =>
       initDut(dut)
 
+      // SPEC-DERIVED
       for (_ <- 0 until 20) {
-        dut.io.fdi_pl_state_sts.expect(PhyState.reset)
-        dut.io.rdi_lp_state_req.expect(PhyStateReq.nop)
-        dut.io.fdi_pl_inband_pres.expect(false.B)
-        dut.io.fdi_pl_rx_active_req.expect(false.B)
-        dut.io.sb_snd.expect(SideBandMessage.NOP)
+        dut.io.fdi_pl_state_sts.expect(PhyState.reset) // SPEC-DERIVED
+        dut.io.rdi_lp_state_req.expect(PhyStateReq.nop) // SPEC-DERIVED
+        dut.io.fdi_pl_inband_pres.expect(false.B) // SPEC-DERIVED
+        dut.io.fdi_pl_rx_active_req.expect(false.B) // SPEC-DERIVED
+        dut.io.sb_snd.expect(SideBandMessage.NOP) // RTL-DERIVED
         dut.clock.step(1)
       }
     }
@@ -154,9 +155,9 @@ class LinkManagementFsmSuite extends AnyFlatSpec with ChiselScalatestTester {
       initDut(dut)
       driveToActive(dut)
 
-      dut.io.fdi_pl_state_sts.expect(PhyState.active)
-      dut.io.fdi_pl_inband_pres.expect(true.B)
-      dut.io.fdi_pl_rx_active_req.expect(true.B)
+      dut.io.fdi_pl_state_sts.expect(PhyState.active) // SPEC-DERIVED
+      dut.io.fdi_pl_inband_pres.expect(true.B) // SPEC-DERIVED
+      dut.io.fdi_pl_rx_active_req.expect(true.B) // SPEC-DERIVED
     }
   }
 
@@ -176,8 +177,8 @@ class LinkManagementFsmSuite extends AnyFlatSpec with ChiselScalatestTester {
 
       // Hold required exchange completion low/high (no sb_rdy, no ADV_CAP recv).
       for (_ <- 0 until 12) {
-        dut.io.fdi_pl_state_sts.expect(PhyState.reset)
-        dut.io.sb_snd.expect(SideBandMessage.ADV_CAP)
+        dut.io.fdi_pl_state_sts.expect(PhyState.reset) // SPEC-DERIVED
+        dut.io.sb_snd.expect(SideBandMessage.ADV_CAP) // RTL-DERIVED
         dut.clock.step(1)
       }
 
@@ -185,7 +186,7 @@ class LinkManagementFsmSuite extends AnyFlatSpec with ChiselScalatestTester {
       pulseSbReceive(dut, SideBandMessage.ADV_CAP)
       pulseSbReady(dut)
       completeFdiBringupToActive(dut)
-      dut.io.fdi_pl_state_sts.expect(PhyState.active)
+      dut.io.fdi_pl_state_sts.expect(PhyState.active) // SPEC-DERIVED
     }
   }
 
@@ -199,12 +200,12 @@ class LinkManagementFsmSuite extends AnyFlatSpec with ChiselScalatestTester {
       waitUntil(dut, maxCycles = 20, reason = "LINKERROR entry") {
         dut.io.fdi_pl_state_sts.peek().litValue == PhyState.linkError.litValue
       }
-      dut.io.fdi_pl_state_sts.expect(PhyState.linkError)
+      dut.io.fdi_pl_state_sts.expect(PhyState.linkError) // SPEC-DERIVED
 
       // Keep RX active status asserted and verify no premature recovery.
       dut.io.fdi_lp_rx_active_sts.poke(true.B)
       for (_ <- 0 until 6) {
-        dut.io.fdi_pl_state_sts.expect(PhyState.linkError)
+        dut.io.fdi_pl_state_sts.expect(PhyState.linkError) // RTL-DERIVED
         dut.clock.step(1)
       }
 
@@ -214,7 +215,7 @@ class LinkManagementFsmSuite extends AnyFlatSpec with ChiselScalatestTester {
       waitUntil(dut, maxCycles = 20, reason = "recovery to RESET") {
         dut.io.fdi_pl_state_sts.peek().litValue == PhyState.reset.litValue
       }
-      dut.io.fdi_pl_state_sts.expect(PhyState.reset)
+      dut.io.fdi_pl_state_sts.expect(PhyState.reset) // RTL-DERIVED
     }
   }
 
@@ -234,7 +235,7 @@ class LinkManagementFsmSuite extends AnyFlatSpec with ChiselScalatestTester {
 
       // No stall-done => no transition yet.
       for (_ <- 0 until 8) {
-        dut.io.fdi_pl_state_sts.expect(PhyState.active)
+        dut.io.fdi_pl_state_sts.expect(PhyState.active) // SPEC-DERIVED
         dut.clock.step(1)
       }
 
@@ -243,12 +244,12 @@ class LinkManagementFsmSuite extends AnyFlatSpec with ChiselScalatestTester {
       waitUntil(dut, maxCycles = 20, reason = "ACTIVE->RETRAIN transition") {
         dut.io.fdi_pl_state_sts.peek().litValue == PhyState.retrain.litValue
       }
-      dut.io.fdi_pl_state_sts.expect(PhyState.retrain)
+      dut.io.fdi_pl_state_sts.expect(PhyState.retrain) // SPEC-DERIVED
 
       // With no extra triggers, remain in RETRAIN.
       dut.io.linkmgmt_stalldone.poke(false.B)
       for (_ <- 0 until 8) {
-        dut.io.fdi_pl_state_sts.expect(PhyState.retrain)
+        dut.io.fdi_pl_state_sts.expect(PhyState.retrain) // RTL-DERIVED
         dut.clock.step(1)
       }
     }
